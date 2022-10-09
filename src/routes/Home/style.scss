@@ -1,0 +1,162 @@
+::-webkit-scrollbar {
+    width: 0.3em;
+    display: none;
+  }
+  
+  .RecentTasks {
+    padding: 5px 0;
+    .RecentTasks-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 10px;
+        align-items: center;
+      }
+      
+      .RecentTasks-header h4 {
+        margin: 0;
+        padding: 0;
+      }
+      
+      .RecentTasks-header .link {
+        font-weight: bold;
+      }
+      
+      .RecentTasks-cards {
+        display: flex;
+        flex-wrap: nowrap;
+        max-width: 100%;
+        padding: 0 10px;
+        overflow: auto;
+        gap: 10px;
+      }
+      
+      .RecentTasks-cards .ui-recent-card {
+        border-radius: 15px;
+        /* min-width: 320px;
+        width: 320px; */
+        /* max-width: 70vw !important; */
+        /* padding: 10px; */
+        color: #fff;
+        position: relative;
+      }
+
+    .RecentTasks-cards .ui-recent-card .ui-recent-card-header {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .RecentTasks-cards .ui-recent-card-body {
+        width: 90%;
+        text-align: left;
+    }
+    
+    .RecentTasks-cards .ui-recent-card-body-title {
+        width: 90%;
+        color: #f8f8f8;
+        margin-bottom: 15px;
+        margin-top: 5px;
+    }
+  }
+  
+  
+  .ui-recent-card-bg{
+    border-radius: 15px;
+    background-size: cover!important;
+    background-position: center!important;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    filter: blur(5px);
+    z-index: -1;
+  }
+  .ui-recent-card-bg.laser-tag{
+    /* background: url(https://wallpapercave.com/dwp2x/wp5194494.jpg); */
+    background: url(https://media.istockphoto.com/vectors/gun-gaming-neon-sign-vector-id1046023946?k=20&m=1046023946&s=612x612&w=0&h=fDUUpMBWdxjHPUOnzFEAy6YRCNMDhql1qdhebpBN8gE=);
+  }
+  .ui-recent-card-bg.airsoft{
+    background: url(https://wallpapercave.com/wp/wp6011813.png);
+  }
+  .RecentTasks-cards .ui-recent-card-header-button {
+    background: rgba(255, 255, 255, 0.2);
+    display: block;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+  }
+  
+  
+  .ui-recent-card-footer {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .ui-recent-card-footer-users {
+    display: flex;
+    padding-left: 20px;
+  }
+  
+  .ui-recent-card-footer-users .ui-avatar {
+    margin-left: -25px;
+  }
+  
+  .ui-card {
+    box-shadow: 0 1px 2px #ccc;
+  }
+  
+  .ui-recent-card-header,
+  .ui-recent-card-body,
+  .ui-recent-card-footer{
+    padding: 10px;
+  }
+  
+  
+  .BottomCards {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .BottomCards-bottom-card {
+    flex: 1;
+    min-width: 150px;
+    text-align: left;
+    border: 1px solid #ddd;
+    height: auto;
+    box-shadow: none;
+    padding: 15px;
+  }
+  
+  .BottomCards-card {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .BottomCards-icon {
+    padding: 10px 0;
+    border-radius: 50%;
+  }
+  
+  .BottomCards-title {
+    font-weight: bold;
+    font-size: 0.9em;
+  }
+  
+  .BottomCards-time {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8em;
+    font-weight: 400;
+    padding: 0;
+    margin: 4px 0;
+    color: #aaa;
+  }
+  

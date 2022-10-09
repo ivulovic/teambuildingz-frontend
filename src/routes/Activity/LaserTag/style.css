@@ -1,0 +1,245 @@
+.section{
+    text-align: left;
+    overflow: hidden;
+}
+.section h1{
+    font-size: 0.8rem;
+}
+.section h2{
+    font-size: 0.75rem;
+    font-weight: 400;
+    opacity: 0.5;
+}
+
+.activity-list {
+    display: grid;
+    gap: 1rem;
+    padding: 0;
+}
+.activity-list li{
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    gap: 1rem;
+    list-style-type: none;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    border-radius: 4px;
+    align-items: center;
+}
+.activity-list li div:last-child{
+    display: flex;
+    justify-content: flex-end;
+}
+.activity-list .info {
+    display: grid;
+    gap: 1rem;
+}
+.activity-list .info a{
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.activity-list .info span{
+    font-size: 0.75rem;
+    opacity: 0.5;
+}
+.page-layout{
+    display: grid;
+    gap: 1rem;
+}
+.individual-statistic{
+    gap: 1rem;
+    display: grid;
+}
+
+.inline-list{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+}
+.inline-list.teams{
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 1fr 0.3fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+}
+.inline-list.teams .fight{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 3rem;
+    color: #ddd;
+}
+.inline-list.teams .section{
+    text-align: center;
+}
+.inline-list.teams .inline-list{
+   display: grid;
+   gap: 0rem;
+   row-gap: 0.5rem;
+   grid-template-columns: repeat(3, 1fr);
+
+}
+.individual-statistic .player-header{
+    display: grid;
+    text-align: center;
+    justify-content: center;
+}
+.individual-statistic .player-header button{
+    background-color: rgb(247 247 247);
+    text-align: center;
+    border:none;
+    font-weight: bold;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.individual-statistic .player-header h1{
+    word-break: break-word;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.individual-statistic .player-header h1 span{
+    min-width: 60px;
+    display: inline-block;
+}
+.subject-inactive{
+    opacity: 0.1;
+    filter: grayscale(1);
+}
+
+.subject-active{
+    opacity: 1;
+    filter: grayscale(0);
+}
+.player-achievements{
+    text-align: center;
+    /* text-transform: uppercase; */
+}
+
+.player-achievements h2{
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.player-achievements h2:first-child{
+    font-size: 0.60rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.uppercase{
+    text-transform: uppercase!important;
+}
+.player-achievements h3{
+    font-size: 0.55rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    opacity: 0.4;
+}
+
+.player-achievements h1{
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 1;
+}
+.player-achievements svg {
+    font-size: 1.5rem;
+    transform: scale(1.5);
+    margin: 0.5rem 0 0.25rem 0;
+}
+.player-achievements h2{
+    font-size: 0.65rem;
+    opacity: 1;
+}
+
+.tooltip-bar{
+    background-color: white;
+    padding: 0.5rem;
+    font-size: 0.75rem;
+    display: grid;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.tooltip-check-main span{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: var(--character-1);
+    margin-right: 10px;
+}
+
+.tooltip-check-compared span{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: var(--character-2);
+    margin-right: 10px;
+}
+
+.text-character-1{
+    color: var(--character-1);
+}
+.text-character-2{
+    color: var(--character-2);
+}
+.link-team-statistics{
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-align: right;
+    cursor: pointer;
+}
+.winner{
+    font-size: 5rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.winner svg{
+    width: 100%;
+}
+.winner span{
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* color: #222; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.winner{
+    color: var(--success);
+    gap: 1rem;
+}
+.winner-list{
+    margin-bottom: 1rem;
+}
+.handshake{
+    display: inline-block;
+    font-size: 3rem!important;
+}
+.text-positive{
+    color: var(--success);
+}
+.text-negative{
+    color: var(--accent);
+}
+.text-neutral{
+    color: #222;
+}
+.text-secondary{
+    color: #222;
+    opacity: 0.3;
+}
+.no-gap{
+    gap: 0;
+}
