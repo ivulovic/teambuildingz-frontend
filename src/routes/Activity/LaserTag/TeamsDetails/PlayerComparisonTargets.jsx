@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import BarChart from "../../../../components/Charts/Bar";
 import { data } from "../data";
-import Section from "../Section";
+import Section from "../../../../components/Section";
 
 export default function PlayerComparisonTargets({
     primary,

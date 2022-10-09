@@ -1,9 +1,8 @@
 import { useState } from "react";
-import Avatar from "../../../../components/Avatar";
 import {FiChevronRight, FiChevronLeft} from 'react-icons/fi';
-
+import Avatar from "../../../../components/Avatar";
 import { data } from "../data";
-import Section from "../Section";
+import Section from "../../../../components/Section";
 import PlayerTargets from "./PlayerTargets";
 
 export default function PlayerComparison() {

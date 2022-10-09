@@ -1,0 +1,23 @@
+.player{
+    display: grid;
+    gap: 0.25rem;
+    cursor: pointer;
+    &:hover{
+        .name{
+            font-weight: 500;
+        }
+        .avatar{
+            transition: all 0.3s ease-in-out;
+            transform: scale(1.1);
+        }
+    }
+    .name{
+        font-size: 1.25rem;
+        font-weight: 400;
+        text-align: center;
+        &.small{
+            font-size: 0.60rem;
+            line-height: 0.6rem;
+        }
+    }
+}

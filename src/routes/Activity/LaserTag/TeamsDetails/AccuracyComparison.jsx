@@ -1,6 +1,6 @@
 import SingleBarChart from "../../../../components/Charts/SingleBar";
 import { data } from "../data";
-import Section from "../Section";
+import Section from "../../../../components/Section";
 
 export default function AccuracyComparison() {
   const statistic = data.statistic.sort((a, z) => z.accuracy - a.accuracy).map((x, i) => {

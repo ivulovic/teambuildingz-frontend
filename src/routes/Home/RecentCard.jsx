@@ -8,9 +8,9 @@ const Card = ({ id, title, className, members, date }) => {
       <div className={`ui-recent-card-bg ${className}`}></div>
       <div className="ui-recent-card-header">
         <div className="ui-recent-card-header-left">
-          <a className="link ui-recent-card-header-button" href="#">
+          <span className="link ui-recent-card-header-button">
             {date}
-          </a>
+          </span>
         </div>
       </div>
       <div className="ui-recent-card-body">

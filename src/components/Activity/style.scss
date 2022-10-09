@@ -1,0 +1,31 @@
+.activity{
+    .title{
+        font-size: 0.85rem;
+        font-weight: bold;
+        color: var(--link);
+        line-height: 2rem;
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+    .location,
+    .date, 
+    .members{
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+    .members{
+        display: flex;
+        cursor: pointer;
+        a{
+            &:hover{
+                font-weight: 500;
+            }
+        }
+    }
+    .footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

@@ -1,10 +1,8 @@
-import { BiTargetLock } from "react-icons/bi";
-import { GiBurningSkull, GiHastyGrave } from "react-icons/gi";
-import { RiKnifeBloodLine } from "react-icons/ri";
+import { GiBurningSkull } from "react-icons/gi";
 import { Link, useLocation, useParams } from "react-router-dom";
-import Avatar from "../../../../components/Avatar";
+import Player from "../../../../components/Player";
 import { data, Users } from "../data";
-import Section from "../Section";
+import Section from "../../../../components/Section";
 
 export default function IndividualStatistic({ id }) {
   const userId = id;
@@ -22,49 +20,20 @@ export default function IndividualStatistic({ id }) {
       : pathnameParts.slice(0, pathnameParts.length - 2).join("/");
     return path;
   };
+
   return (
     <div className="individual-statistic">
       <div className="inline-list">
-        <div className="player-header">
-          <Avatar
-            width={70}
-            height={70}
-            img={user.image}
-          />
-          <h1>{user.name}</h1>
-        </div>
-      </div>
-      <div className="inline-list">
-        <div
-          className="player-achievements"
-          title="Times you took all Health Points from a single player"
-        >
-          <RiKnifeBloodLine />
-          <h2>Убистава</h2>
-          <h1>{userStatistic.kills}</h1>
-        </div>
-
-        <div
-          className="player-achievements"
-          title="Precission of your shotting"
-        >
-          <BiTargetLock />
-          <h2>Прецизност</h2>
-          <h1>{userStatistic.accuracy}%</h1>
-        </div>
-
-        <div
-          className="player-achievements"
-          title="Times single player took all your Health Points"
-        >
-          <GiHastyGrave />
-          <h2>Смрти</h2>
-          <h1>{userStatistic.gameOver}</h1>
-        </div>
+        <Player
+          width={70}
+          height={70}
+          image={user.image}
+          name={user.name}
+        />
       </div>
 
       <div className="inline-list teams">
-        <Section title={`Саиграчи`}>
+        <Section title={``}>
           <div className="inline-list">
             {team.participants.map((x) => {
               return (
@@ -73,12 +42,13 @@ export default function IndividualStatistic({ id }) {
                   to={`${getRootPathname()}/users/${x.id}`}
                   className="player-header"
                 >
-                  <Avatar
-                    width={35}
-                    height={35}
-                    img={x.image}
+                  <Player
+                    width={32}
+                    height={32}
+                    image={x.image}
+                    name={x.name}
+                    nameClassName="small"
                   />
-                  <h1>{x.name}</h1>
                 </Link>
               );
             })}
@@ -87,7 +57,7 @@ export default function IndividualStatistic({ id }) {
         <span className="fight">
           <GiBurningSkull />
         </span>
-        <Section title={"Противници"}>
+        <Section title={""}>
           <div className="inline-list">
             {opponentTeam.participants.map((x) => {
               return (
@@ -96,12 +66,13 @@ export default function IndividualStatistic({ id }) {
                   to={`${getRootPathname()}/users/${x.id}`}
                   className="player-header"
                 >
-                  <Avatar
-                    width={35}
-                    height={35}
-                    img={x.image}
+                  <Player
+                    width={32}
+                    height={32}
+                    image={x.image}
+                    name={x.name}
+                    nameClassName="small"
                   />
-                  <h1>{x.name}</h1>
                 </Link>
               );
             })}
@@ -110,8 +81,9 @@ export default function IndividualStatistic({ id }) {
       </div>
 
       <Link className="link-team-statistics" to={`${getRootPathname()}/teams`}>
-        Статистика тимова
+        Погледај статистику оба тима
       </Link>
+      
     </div>
   );
 }

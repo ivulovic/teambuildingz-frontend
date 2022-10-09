@@ -1,7 +1,6 @@
 import SingleBarChart from "../../../../components/Charts/SingleBar";
 import { data } from "../data";
-import Section from "../Section";
-
+import Section from "../../../../components/Section";
 
 export default function HitsComparison() {
   const statistic = data.statistic.sort((a, z) => z.hits.total - a.hits.total).map((x, i) => {

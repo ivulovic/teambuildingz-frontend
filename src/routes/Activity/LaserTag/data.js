@@ -23,7 +23,7 @@ export const Users = {
 export const data = {
     id: '1',
     name: 'Laser Tag',
-    company: 'LaserWar',
+    organization: 'LaserWar',
     location: 'Kamenički park',
     date: '05.10.2022.',
     participants: [

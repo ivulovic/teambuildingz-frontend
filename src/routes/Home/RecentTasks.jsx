@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import RecentCard from "./RecentCard";
 import { games } from "../Activity/LaserTag/data";
+import Section from "../../components/Section";
+import Activity from "../../components/Activity";
 
 const RecentTasks = () => {
   const recentLaserTag = games[0];
@@ -12,23 +12,20 @@ const RecentTasks = () => {
       path: "laser-tag",
       title: recentLaserTag.name,
       date: recentLaserTag.date,
+      location: recentLaserTag.location,
       members: recentLaserTag.participants,
+      organization: recentLaserTag.organization,
     },
   ];
-  return (
-    <div className="RecentTasks">
-      <div className="RecentTasks-header">
-        <h4>Recent Activities</h4>
-      </div>
-      <div className="RecentTasks-cards">
-        {recentCardItems.map((e) => (
-          <Link to={`/activity/${e.path}/${recentLaserTag.id}`}>
-            <RecentCard className={e.path} key={e.id} {...e} />
-          </Link>
-        ))}
-      </div>
-    </div>
-  );
+  return <div>
+
+    <Section
+      title="Ваше активности"
+      subtitle={"Активности у којима сте недавно учествовали"}
+    > 
+      {recentCardItems.map(activity => <Activity key={activity.id} {...activity} />)}
+    </Section>
+  </div>
 };
 
 export default RecentTasks;
