@@ -224,13 +224,14 @@
 .winner{
     color: var(--success);
     gap: 1rem;
+    font-size: 3rem;
 }
 .winner-list{
     margin-bottom: 1rem;
 }
 .handshake{
     display: inline-block;
-    font-size: 3rem!important;
+    font-size: 2rem!important;
 }
 .text-positive{
     color: var(--success);

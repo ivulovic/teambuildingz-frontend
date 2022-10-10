@@ -22,9 +22,9 @@ export const Users = {
 };
 export const data = {
     id: '1',
-    name: 'Laser Tag',
+    name: 'Ласер таг',
     organization: 'LaserWar',
-    location: 'Kamenički park',
+    location: 'Каменички парк',
     date: '05.10.2022.',
     participants: [
         Users.ivanv, Users.milanr, Users.lazarp, Users.mimiz, Users.mirak, Users.smiljandj, Users.janam, Users.igorj, Users.tijanat, Users.draganat, Users.darkos, Users.bojans
@@ -32,7 +32,7 @@ export const data = {
     teams: [
       {
         id: '1',
-        name: 'Црвени Тим',
+        name: 'Red',
         participants: [
           Users.ivanv,
           Users.milanr,
@@ -44,7 +44,7 @@ export const data = {
       },
       {
         id: '2',
-        name: 'Плави Тим',
+        name: 'Blue',
         participants: [
           Users.janam,
           Users.igorj,

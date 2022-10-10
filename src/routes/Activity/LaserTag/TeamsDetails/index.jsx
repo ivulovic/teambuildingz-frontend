@@ -11,7 +11,7 @@ import WoundsComparison from "./WoundsComparison";
 
 export default function Details(){
     return <div className="page-layout">
-        {/* <Achievements /> */}
+        <Achievements />
         <PlayerComparison />
         <RatingComparison />
         <AccuracyComparison />

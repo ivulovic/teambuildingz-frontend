@@ -1,14 +1,11 @@
 import {
   GiDiamondTrophy,
-  GiHeavyBullets,
-  GiMuscleUp,
-  GiNinjaHead,
-  GiShieldReflect,
-  GiTargetDummy,
 } from "react-icons/gi";
-import { FaRegHandshake, FaUserInjured } from "react-icons/fa";
-import Section from "../../../../components/Section";
+import { FaRegHandshake } from "react-icons/fa";
 import { data } from "../data";
+import Achievement from "../../../../components/Achievement";
+import Player from "../../../../components/Player";
+import Team from "../../../../components/Team";
 
 export default function Achievements() {
   const getValue = (key) => data.statistic.sort((a, z) => z[key] - a[key]);
@@ -21,6 +18,7 @@ export default function Achievements() {
   const [rambo] = getValue("shotFired");
   const [warrior] = getValue("rating");
   const [invulnerable] = getNestedValue("wounds");
+
   const getWinner = () => {
     const totalRating = [];
     data.teams.map((x) => {
@@ -29,102 +27,88 @@ export default function Achievements() {
         totalRating: data.statistic
           .filter((y) => y.teamId === x.id)
           .reduce((a, x) => a + x.rating, 0),
+        participants: data.statistic.filter(y => y.teamId === x.id).sort((a, z) => z.rating - a.rating)
       });
     });
     return totalRating.sort((a, z) => z.totalRating - a.totalRating);
   };
   const [winner, loser] = getWinner();
-  console.log(getWinner());
+  console.log(winner);
   return (
-    <Section
-    // title="Achievements"
-    // subtitle="Given to players who meet specific criteria"
-    >
-      <div className="inline-list winner-list">
+    <div className="achievements">
+      {/* <div className="inline-list winner-list">
         <div className="winner">
           <GiDiamondTrophy />
           <span className="text-neutral">{winner.name}</span>
           <div className="inline-list">
-            <span className="text-positive">
+            <span className="text-character-1">
               {winner.totalRating.toFixed(2)}
             </span>
             <span className="text-secondary handshake">
               <FaRegHandshake />
             </span>
-            <span className="text-negative">
+            <span className="text-character-2">
               {loser.totalRating.toFixed(2)}
             </span>
           </div>
         </div>
-        {/* <div className="loser">
-        <FaRegSadCry />
-        <span>{loser.name}</span>
-        <span>{loser.totalRating.toFixed(2)}</span>
       </div> */}
-      </div>
+      <Team 
+        name={`Congratulations ${winner.name}!!!`}
+        members={winner.participants}
+      />
       <div className="inline-list">
-        <div className="player-achievements">
-          <h2 className={`text-character-${destroyer.teamId}`}>
-            {destroyer.user.name}
-          </h2>
-          <GiMuscleUp className={`text-character-${destroyer.teamId}`} />
-          <h2>Разбијач</h2>
-          <h1>{destroyer.damageDone}</h1>
-          <h3>Нанео највише штете</h3>
-        </div>
+        <Achievement
+          description="Разарач"
+          title={destroyer.user.name}
+          image={destroyer.user.image}
+          points={destroyer.damageDone}
+          descriptionLong="Нанео највише штете"
+          path={`/activity/laser-tag/${data.id}/users/${destroyer.user.id}`}
+        />
+        <Achievement
+          description="Снајпер"
+          title={sniper.user.name}
+          image={sniper.user.image}
+          points={sniper.accuracy.toFixed(2) + "%"}
+          descriptionLong="Најбоља прецизност"
+          path={`/activity/laser-tag/${data.id}/users/${sniper.user.id}`}
+        />
+        <Achievement
+          description="Камиказа"
+          points={kamikaze.gameOver}
+          title={kamikaze.user.name}
+          image={kamikaze.user.image}
+          descriptionLong="Највише смрти"
+          path={`/activity/laser-tag/${data.id}/users/${kamikaze.user.id}`}
+        />
+        <Achievement
+          description="Рамбо"
+          title={rambo.user.name}
+          image={rambo.user.image}
+          points={rambo.shotFired}
+          descriptionLong="Највише испуцаних метака"
+          path={`/activity/laser-tag/${data.id}/users/${rambo.user.id}`}
+        />
 
-        <div className="player-achievements">
-          <h2 className={`text-character-${sniper.teamId}`}>
-            {sniper.user.name}
-          </h2>
-          <GiTargetDummy className={`text-character-${sniper.teamId}`} />
-          <h2>Снајпер</h2>
-          <h1>{sniper.accuracy.toFixed(2)}%</h1>
-          <h3>Најбоља прецизност</h3>
-        </div>
+        <Achievement
+          description="Нерањив"
+          descriptionLong="Најмање рана"
+          title={invulnerable.user.name}
+          image={invulnerable.user.image}
+          points={invulnerable.wounds.total}
+          path={`/activity/laser-tag/${data.id}/users/${invulnerable.user.id}`}
+        />
 
-        <div className="player-achievements">
-          <h2 className={`text-character-${kamikaze.teamId}`}>
-            {kamikaze.user.name}
-          </h2>
-          <FaUserInjured className={`text-character-${kamikaze.teamId}`} />
-          <h2>Камиказа</h2>
-          <h1>{kamikaze.gameOver}</h1>
-          <h3>Највише убијан</h3>
-        </div>
-
-        <div className="player-achievements">
-          <h2 className={`text-character-${rambo.teamId}`}>
-            {rambo.user.name}
-          </h2>
-          <GiHeavyBullets className={`text-character-${rambo.teamId}`} />
-          <h2>Рамбо</h2>
-          <h1>{rambo.shotFired}</h1>
-          <h3>Највише испуцаних меткова</h3>
-        </div>
-
-        <div className="player-achievements">
-          <h2 className={`text-character-${invulnerable.teamId}`}>
-            {invulnerable.user.name}
-          </h2>
-          <GiShieldReflect
-            className={`text-character-${invulnerable.teamId}`}
-          />
-          <h2>Нерањив</h2>
-          <h1>{invulnerable.wounds.total}</h1>
-          <h3>Најмање рањаван</h3>
-        </div>
-
-        <div className="player-achievements">
-          <h2 className={`text-character-${warrior.teamId}`}>
-            {warrior.user.name}
-          </h2>
-          <GiNinjaHead className={`text-character-${warrior.teamId}`} />
-          <h2>Ратник</h2>
-          <h1>{warrior.rating.toFixed(2)}</h1>
-          <h3>Најбољи резултат</h3>
-        </div>
+        <Achievement
+          description="Ратник"
+          title={warrior.user.name}
+          image={warrior.user.image}
+          descriptionLong="Најбољи резултат"
+          points={warrior.rating.toFixed(2)}
+          path={`/activity/laser-tag/${data.id}/users/${warrior.user.id}`}
+        />
       </div>
-    </Section>
+    </div>
   );
 }

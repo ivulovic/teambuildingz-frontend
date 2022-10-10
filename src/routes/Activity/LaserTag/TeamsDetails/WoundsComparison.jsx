@@ -14,7 +14,7 @@ export default function WoundsComparison() {
 
   return (
     <Section
-      title="Рањавања"
+      title="Ране"
       subtitle="Број нанетих рана противнику"
     >
       <SingleBarChart data={statistic} />

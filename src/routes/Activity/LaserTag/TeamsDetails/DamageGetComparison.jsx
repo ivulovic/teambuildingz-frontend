@@ -14,7 +14,7 @@ export default function DamageGet() {
 
   return (
     <Section
-      title="Оштећени"
+      title="Настале штете"
       subtitle="Играчи над којим су противници узели највише поена"
     >
       <SingleBarChart data={statistic} />

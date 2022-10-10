@@ -6,9 +6,10 @@ export default function Player({
     image,
     width = 35,
     height = 35,
+    className = '',
     nameClassName = '',
 }){
-    return <div className="player">
+    return <div className={`player ${className}`}>
         <Avatar 
             img={image}
             width={width}

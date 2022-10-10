@@ -41,7 +41,7 @@ export default function Targets({ id }) {
   return (
     <>
       <Section
-        title="Рањавања"
+        title="Ране"
         subtitle={
           "Погодак након кога противник почиње да крвари"
         }
@@ -49,7 +49,7 @@ export default function Targets({ id }) {
         <BarChart data={woundsChartData} />
       </Section>
 
-      <Section title="Погодак" subtitle={"Погодак начињен након што је противник рањен"}>
+      <Section title="Погоци" subtitle={"Погодак начињен након што је противник рањен"}>
         <BarChart data={hitsChartData} />
       </Section>
     </>

@@ -24,66 +24,56 @@ export default function IndividualStatistic({ id }) {
   return (
     <div className="individual-statistic">
       <div className="inline-list">
-        <Player
-          width={70}
-          height={70}
-          image={user.image}
-          name={user.name}
-        />
+        <Player width={70} height={70} image={user.image} name={user.name} />
       </div>
 
       <div className="inline-list teams">
-        <Section title={``}>
-          <div className="inline-list">
-            {team.participants.map((x) => {
-              return (
-                <Link
-                  replace={true}
-                  to={`${getRootPathname()}/users/${x.id}`}
-                  className="player-header"
-                >
-                  <Player
-                    width={32}
-                    height={32}
-                    image={x.image}
-                    name={x.name}
-                    nameClassName="small"
-                  />
-                </Link>
-              );
-            })}
-          </div>
-        </Section>
+        <div className="inline-list">
+          {team.participants.map((x) => {
+            return (
+              <Link
+                replace={true}
+                to={`${getRootPathname()}/users/${x.id}`}
+                className="player-header"
+              >
+                <Player
+                  width={32}
+                  height={32}
+                  image={x.image}
+                  name={x.name}
+                  nameClassName="small"
+                />
+              </Link>
+            );
+          })}
+        </div>
         <span className="fight">
           <GiBurningSkull />
         </span>
-        <Section title={""}>
-          <div className="inline-list">
-            {opponentTeam.participants.map((x) => {
-              return (
-                <Link
-                  replace={true}
-                  to={`${getRootPathname()}/users/${x.id}`}
-                  className="player-header"
-                >
-                  <Player
-                    width={32}
-                    height={32}
-                    image={x.image}
-                    name={x.name}
-                    nameClassName="small"
-                  />
-                </Link>
-              );
-            })}
-          </div>
-        </Section>
+        <div className="inline-list">
+          {opponentTeam.participants.map((x) => {
+            return (
+              <Link
+                replace={true}
+                to={`${getRootPathname()}/users/${x.id}`}
+                className="player-header"
+              >
+                <Player
+                  width={32}
+                  height={32}
+                  image={x.image}
+                  name={x.name}
+                  nameClassName="small"
+                />
+              </Link>
+            );
+          })}
+        </div>
       </div>
 
       <Link className="link-team-statistics" to={`${getRootPathname()}/teams`}>
         Погледај статистику оба тима
       </Link>
-      
     </div>
   );
 }

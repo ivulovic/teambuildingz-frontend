@@ -1,0 +1,46 @@
+.team-wrapper{
+    padding: 1rem 0;
+    .team{
+        display: flex;
+        position: relative;
+        height: 200px;
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        .player-0{
+            position: relative;
+            left: 38%;
+            top: 0%;
+        }
+        .player-1{
+            position: relative;
+            left: 30px;
+            top: 50px;
+        }
+        .player-2{
+            position: relative;
+            left: 50px;
+            top: 40px;
+        }
+        .player-3{
+            position: relative;
+            right: 160px;
+            bottom: 30px;
+        }
+        .player-4{
+            position: relative;
+            right: 90px;
+            bottom: 30px;
+        }
+        .player-5{
+            position: relative;
+            right: 220px;
+            bottom: 60px;
+        }
+    }
+    h1{
+        text-align: center;
+        font-family: "Satisfy", cursive !important;
+    }
+}

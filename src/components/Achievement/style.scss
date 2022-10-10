@@ -1,0 +1,23 @@
+.achievement {
+  text-align: center;
+  cursor: pointer;
+  h1 {
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  h2 {
+    font-size: 0.75rem;
+  }
+  p {
+    font-size: 0.6rem;
+    opacity: 0.5;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-bottom: 0.25rem;
+  }
+  .tooltip-content{
+    display: grid;
+    gap: 0.5rem;
+    text-transform: uppercase;
+  }
+}
