@@ -2,7 +2,6 @@ import { GiBurningSkull } from "react-icons/gi";
 import { Link, useLocation, useParams } from "react-router-dom";
 import Player from "../../../../components/Player";
 import { data, Users } from "../data";
-import Section from "../../../../components/Section";
 
 export default function IndividualStatistic({ id }) {
   const userId = id;
@@ -37,8 +36,6 @@ export default function IndividualStatistic({ id }) {
                 className="player-header"
               >
                 <Player
-                  width={32}
-                  height={32}
                   image={x.image}
                   name={x.name}
                   nameClassName="small"
@@ -59,8 +56,6 @@ export default function IndividualStatistic({ id }) {
                 className="player-header"
               >
                 <Player
-                  width={32}
-                  height={32}
                   image={x.image}
                   name={x.name}
                   nameClassName="small"
@@ -72,7 +67,7 @@ export default function IndividualStatistic({ id }) {
       </div>
 
       <Link className="link-team-statistics" to={`${getRootPathname()}/teams`}>
-        Погледај статистику оба тима
+        Team Statistic
       </Link>
     </div>
   );

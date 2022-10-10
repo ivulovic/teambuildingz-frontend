@@ -14,8 +14,8 @@ export default function DeathsComparison() {
 
   return (
     <Section
-      title="Смрти"
-      subtitle="Укупан број смрти играча након одигране игре"
+      title="Deaths"
+      subtitle="The total number of deaths"
     >
       <SingleBarChart data={statistic} />
     </Section>

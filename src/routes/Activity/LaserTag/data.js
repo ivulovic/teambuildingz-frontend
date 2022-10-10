@@ -7,24 +7,24 @@ const getAvatarImage = (id, gender = 'male') => {
 }
 
 export const Users = {
-  ivanv: { id: "1", name: "Иван", username: "ivanv", image: getAvatarImage('ivanv') },
-  milanr: { id: "2", name: "Милан", username: "milanr", image: getAvatarImage('milanr') },
-  lazarp: { id: "3", name: "Лазар", username: "lazarp", image: getAvatarImage('lazarp') },
-  mimiz: { id: "4", name: "Мими", username: "mimiz", image: getAvatarImage('mimiz', 'female') },
-  mirak: { id: "5", name: "Мира", username: "mirak", image: getAvatarImage('mirak', 'female') },
-  smiljandj: { id: "6", name: "Смиљан", username: "smiljandj", image: getAvatarImage('smiljandj') },
-  janam: { id: "7", name: "Јана", username: "janam", image: getAvatarImage('janam', 'female') },
-  igorj: { id: "8", name: "Игор", username: "igorj", image: getAvatarImage('igorj') },
-  tijanat: { id: "9", name: "Тијана", username: "tijant", image: getAvatarImage('tijanat', 'female') },
-  draganat: { id: "10", name: "Драгана", username: "draganat", image: getAvatarImage('draganat', 'female') },
-  darkos: { id: "11", name: "Дарко", username: "darkos", image: getAvatarImage('darkos') },
-  bojans: { id: "12", name: "Бојан", username: "bojans", image: getAvatarImage('bojans') },
+  ivanv: { id: "1", name: "Ivan", username: "ivanv", image: getAvatarImage('ivanv') },
+  milanr: { id: "2", name: "Milan", username: "milanr", image: getAvatarImage('milanr') },
+  lazarp: { id: "3", name: "Lazar", username: "lazarp", image: getAvatarImage('lazarp') },
+  mimiz: { id: "4", name: "Mimi", username: "mimiz", image: getAvatarImage('mimiz', 'female') },
+  mirak: { id: "5", name: "Mira", username: "mirak", image: getAvatarImage('mirak', 'female') },
+  smiljandj: { id: "6", name: "Smiki", username: "smiljandj", image: getAvatarImage('smiljandj') },
+  janam: { id: "7", name: "Jana", username: "janam", image: getAvatarImage('janam', 'female') },
+  igorj: { id: "8", name: "Igor", username: "igorj", image: getAvatarImage('igorj') },
+  tijanat: { id: "9", name: "Tijana", username: "tijant", image: getAvatarImage('tijanat', 'female') },
+  draganat: { id: "10", name: "Dragana", username: "draganat", image: getAvatarImage('draganat', 'female') },
+  darkos: { id: "11", name: "Darko", username: "darkos", image: getAvatarImage('darkos') },
+  bojans: { id: "12", name: "Bojan", username: "bojans", image: getAvatarImage('bojans') },
 };
 export const data = {
     id: '1',
-    name: 'Ласер таг',
+    name: 'Laser Tag',
     organization: 'LaserWar',
-    location: 'Каменички парк',
+    location: 'Kamenički park',
     date: '05.10.2022.',
     participants: [
         Users.ivanv, Users.milanr, Users.lazarp, Users.mimiz, Users.mirak, Users.smiljandj, Users.janam, Users.igorj, Users.tijanat, Users.draganat, Users.darkos, Users.bojans
@@ -32,7 +32,7 @@ export const data = {
     teams: [
       {
         id: '1',
-        name: 'Red',
+        name: 'Red Team',
         participants: [
           Users.ivanv,
           Users.milanr,
@@ -44,7 +44,7 @@ export const data = {
       },
       {
         id: '2',
-        name: 'Blue',
+        name: 'Blue Team',
         participants: [
           Users.janam,
           Users.igorj,

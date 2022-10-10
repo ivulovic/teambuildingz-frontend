@@ -14,8 +14,8 @@ export default function KillsComparison() {
 
   return (
     <Section
-      title="Убиства"
-      subtitle="Број убистава начињених од сваког играча појединачно"
+      title="Kills"
+      subtitle="The number of kills made by each player individually"
     >
       <SingleBarChart data={statistic} />
     </Section>

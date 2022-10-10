@@ -19,12 +19,12 @@ const RecentTasks = () => {
   ];
   return <div>
 
-    <Section
-      title="Ваше активности"
-      subtitle={"Активности у којима сте недавно учествовали"}
-    > 
+    {/* <Section
+      title="Your activities"
+      subtitle={"Last activities you've been part of:"}
+    >  */}
       {recentCardItems.map(activity => <Activity key={activity.id} {...activity} />)}
-    </Section>
+    {/* </Section> */}
   </div>
 };
 

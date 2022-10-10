@@ -249,3 +249,11 @@
 .no-gap{
     gap: 0;
 }
+
+.achievements{
+    overflow: hidden;
+
+}
+.achievements .inline-list{
+    gap: 0;
+}

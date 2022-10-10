@@ -11,13 +11,12 @@
   p {
     font-size: 0.6rem;
     opacity: 0.5;
-    text-transform: uppercase;
     font-weight: 400;
     padding-bottom: 0.25rem;
   }
   .tooltip-content{
     display: grid;
     gap: 0.5rem;
-    text-transform: uppercase;
+    // text-transform: uppercase;
   }
 }

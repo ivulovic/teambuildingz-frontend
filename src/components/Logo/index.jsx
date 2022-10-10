@@ -5,7 +5,7 @@ export default function Logo(){
     return <Link to="/" className="logo">
         <div>
             <h1>Teambuildingz</h1>
-            <h2>more than analytics</h2>
+            <h2>not just a game .</h2>
         </div>
     </Link>
 }

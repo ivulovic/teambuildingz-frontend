@@ -41,15 +41,15 @@ export default function Targets({ id }) {
   return (
     <>
       <Section
-        title="Ране"
+        title="Wounds"
         subtitle={
-          "Погодак након кога противник почиње да крвари"
+          "A hit that causes the opponent to start bleeding"
         }
       >
         <BarChart data={woundsChartData} />
       </Section>
 
-      <Section title="Погоци" subtitle={"Погодак начињен након што је противник рањен"}>
+      <Section title="Hits" subtitle={"A hit made after the opponent has been wounded"}>
         <BarChart data={hitsChartData} />
       </Section>
     </>

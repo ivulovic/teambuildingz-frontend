@@ -15,8 +15,8 @@ export default function RatingComparison() {
 
   return (
     <Section
-      title="Резултат"
-      subtitle="Однос испуцаних метака, броја убистава, погодака и рањавања, као и прецизност играча"
+      title="Rating"
+      subtitle="The ratio of bullets fired, number of kills, hits and wounds, as well as the accuracy of the player"
     >
       <SingleBarChart data={statistic} />
     </Section>

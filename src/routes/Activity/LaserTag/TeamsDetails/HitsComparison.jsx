@@ -14,8 +14,8 @@ export default function HitsComparison() {
 
   return (
     <Section
-      title="Погоци"
-      subtitle="Број успешно остварених погодака ка противнику"
+      title="Hits"
+      subtitle="The number of successful hits against the opponent"
     >
       <SingleBarChart data={statistic} />
     </Section>

@@ -7,10 +7,10 @@ export default function PlayerTargets({ primary, secondary }) {
 
   const d = useMemo(() => {
     const keys = [
-        { key: "rating", label: "Резултат" },
-        { key: "accuracy", label: "Прецизност" },
-        { key: "kills", label: "Убистава" },
-        { key: "gameOver", label: "Смрти" },
+        { key: "rating", label: "Rating" },
+        { key: "accuracy", label: "Accuracy" },
+        { key: "kills", label: "Kills" },
+        { key: "gameOver", label: "Deaths" },
       ];
     const mainStatistic = data.statistic.find((x) => x.user.id === primary);
     const secondaryStatistic = data.statistic.find(
@@ -27,27 +27,27 @@ export default function PlayerTargets({ primary, secondary }) {
     return [
       ...vals,
       {
-        name: "Погодак",
+        name: "Hits",
         count: Number(mainStatistic.hits.total).toFixed(2),
         compared: Number(secondaryStatistic.hits.total).toFixed(2),
       },
       {
-        name: "Ране",
+        name: "Wounds",
         count: Number(mainStatistic.wounds.total).toFixed(2),
         compared: Number(secondaryStatistic.wounds.total).toFixed(2),
       },
       {
-        name: "Испаљено метака",
+        name: "Shots Fired",
         count: Number(mainStatistic.shotFired).toFixed(2),
         compared: Number(secondaryStatistic.shotFired).toFixed(2),
       },
       {
-        name: "Нанео штете",
+        name: "Damage Done",
         count: Number(mainStatistic.damageDone).toFixed(2),
         compared: Number(secondaryStatistic.damageDone).toFixed(2),
       },
       {
-        name: "Оштећен",
+        name: "Damage Received",
         count: Number(mainStatistic.damageGet).toFixed(2),
         compared: Number(secondaryStatistic.damageGet).toFixed(2),
       },

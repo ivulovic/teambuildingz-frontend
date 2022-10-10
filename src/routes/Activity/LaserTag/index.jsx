@@ -16,8 +16,8 @@ export default function LaserTag() {
   return (
     <div>
       <Section
-        title="Ваша учествовања у игри Laser Tag"
-        subtitle="Активности у којима сте недавно учествовали"
+        title="Recent participations in the game Laser Tag"
+        subtitle="Activities you recently played"
       >
         <ul className="activity-list">
           {activities.map((activity) => (

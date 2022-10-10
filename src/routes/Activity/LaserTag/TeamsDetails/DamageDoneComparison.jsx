@@ -14,8 +14,8 @@ export default function DamageDone() {
 
   return (
     <Section
-      title="Нанете штете"
-      subtitle="Број освојених поена након поготка у мету"
+      title="Damage Done"
+      subtitle="The number of points scored after hitting the target"
     >
       <SingleBarChart data={statistic} />
     </Section>

@@ -3,7 +3,6 @@ import Tooltip from "../Tooltip";
 import "./style.scss";
 
 export default function Achievement({
-  path,
   image,
   title,
   points,

@@ -14,8 +14,8 @@ export default function AccuracyComparison() {
   });
   return (
     <Section
-      title="Прецизност"
-      subtitle="Однос испуцаних метака и погодака у мете"
+      title="Accuracy"
+      subtitle="Ratio of bullets fired and hits on targets"
     >
       <SingleBarChart data={statistic} />
     </Section>

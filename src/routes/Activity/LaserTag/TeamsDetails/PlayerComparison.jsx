@@ -33,20 +33,6 @@ export default function PlayerComparison() {
   const user1 = getUserById(data.teams[0].participants[u1].id);
   const user2 = getUserById(data.teams[1].participants[u2].id);
 
-  const getWinner = () => {
-    const totalRating = [];
-    data.teams.map((x) => {
-      totalRating.push({
-        ...x,
-        totalRating: data.statistic
-          .filter((y) => y.teamId === x.id)
-          .reduce((a, x) => a + x.rating, 0),
-      });
-    });
-    return totalRating.sort((a, z) => z.totalRating - a.totalRating);
-  };
-  const [winner, loser] = getWinner();
-
   if (!user2) return <></>;
   return (
     <Section>

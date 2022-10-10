@@ -5,6 +5,9 @@
     &:hover{
         .name{
             font-weight: 500;
+            .small{
+                opacity: 1!important;
+            }
         }
         .avatar{
             transition: all 0.3s ease-in-out;
@@ -16,7 +19,9 @@
         font-weight: 400;
         text-align: center;
         &.small{
-            font-size: 0.60rem;
+            font-size: 0.6rem;
+            opacity: 0.4;
+            // font-weight: 500;
             line-height: 0.6rem;
         }
     }
