@@ -44,9 +44,10 @@ export default function IndividualStatistic({ id }) {
             );
           })}
         </div>
-        <span className="fight">
+        <Link className="game-stats" to={`${getRootPathname()}/teams`}>
           <GiBurningSkull />
-        </span>
+          Game Statistic
+        </Link>
         <div className="inline-list">
           {opponentTeam.participants.map((x) => {
             return (
@@ -66,9 +67,9 @@ export default function IndividualStatistic({ id }) {
         </div>
       </div>
 
-      <Link className="link-team-statistics" to={`${getRootPathname()}/teams`}>
-        Team Statistic
-      </Link>
+      {/* <Link className="link-team-statistics" to={`${getRootPathname()}/teams`}>
+        
+      </Link> */}
     </div>
   );
 }

@@ -63,12 +63,30 @@
     justify-content: space-between;
     align-items: center;
 }
-.inline-list.teams .fight{
+.game-stats{
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    display: flex;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    opacity: 0.4;
+    transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    text-align: center;
+    gap: 0.5rem;
+    line-height: 1.25rem;
+    color: gray;
+}
+.game-stats:hover {
+    opacity: 1;
+    color: var(--accent);
+}
+.game-stats span{
+    font-size: 0.75rem;
+}
+.game-stats svg{
     font-size: 3rem;
-    color: #ddd;
 }
 .inline-list.teams .section{
     text-align: center;
@@ -188,17 +206,6 @@
 }
 .text-character-2{
     color: var(--character-2);
-}
-.link-team-statistics{
-    font-weight: 500;
-    font-size: 0.75rem;
-    text-align: center;
-    cursor: pointer;
-    opacity: 0.4;
-    margin: 0.5rem 0 0 0;
-}
-.link-team-statistics:hover{
-    opacity: 1;
 }
 .winner{
     font-size: 5rem;

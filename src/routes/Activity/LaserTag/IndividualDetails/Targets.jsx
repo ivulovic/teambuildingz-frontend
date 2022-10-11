@@ -40,17 +40,12 @@ export default function Targets({ id }) {
 
   return (
     <>
-      <Section
-        title="Wounds"
-        subtitle={
-          "A hit that causes the opponent to start bleeding"
-        }
-      >
-        <BarChart data={woundsChartData} />
+      <Section title="Hit" subtitle={"A hit you made to the opponent"}>
+        <BarChart data={hitsChartData} />
       </Section>
 
-      <Section title="Hits" subtitle={"A hit made after the opponent has been wounded"}>
-        <BarChart data={hitsChartData} />
+      <Section title="Wound" subtitle={"A hit opponent made to you"}>
+        <BarChart data={woundsChartData} />
       </Section>
     </>
   );
