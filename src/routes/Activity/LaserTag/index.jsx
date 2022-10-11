@@ -2,6 +2,7 @@ import { games } from "./data";
 import Activity from "../../../components/Activity";
 import Section from "../../../components/Section";
 import "./style.css";
+import { Helmet } from "react-helmet-async";
 
 export default function LaserTag() {
   const activities = games.map((x) => ({
@@ -15,6 +16,9 @@ export default function LaserTag() {
 
   return (
     <div>
+      <Helmet>
+        <title>Teambuildingz - LaserTag Overview</title>
+      </Helmet>
       <Section
         title="Recent participations in the game Laser Tag"
         subtitle="Activities you recently played"

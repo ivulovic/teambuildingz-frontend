@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import AccuracyComparison from "./AccuracyComparison";
 import Achievements from "./Achievements";
 import DamageDone from "./DamageDoneComparison";
@@ -11,6 +12,9 @@ import WoundsComparison from "./WoundsComparison";
 
 export default function Details(){
     return <div className="page-layout">
+        <Helmet>
+            <title>Game Statistic | Teambuildingz</title>
+        </Helmet>
         <Achievements />
         <PlayerComparison />
         <RatingComparison />
