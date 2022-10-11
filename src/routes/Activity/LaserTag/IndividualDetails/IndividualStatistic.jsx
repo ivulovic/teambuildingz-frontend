@@ -31,6 +31,7 @@ export default function IndividualStatistic({ id }) {
           {team.participants.map((x) => {
             return (
               <Link
+                key={x.id}
                 replace={true}
                 to={`${getRootPathname()}/users/${x.id}`}
                 className="player-header"
@@ -52,6 +53,7 @@ export default function IndividualStatistic({ id }) {
           {opponentTeam.participants.map((x) => {
             return (
               <Link
+                key={x.id}
                 replace={true}
                 to={`${getRootPathname()}/users/${x.id}`}
                 className="player-header"

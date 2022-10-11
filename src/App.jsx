@@ -1,4 +1,4 @@
-import { BrowserRouter, HashRouter, Navigate, Route, Routes } from "react-router-dom";
+import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import MobileLayout from "./components/MobileLayout";
 import Home from "./routes/Home";
 import Activity from "./routes/Activity";
