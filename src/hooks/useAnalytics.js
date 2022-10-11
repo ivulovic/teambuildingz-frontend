@@ -1,12 +1,15 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useHref } from "react-router-dom";
 
-export default function useAnalytics(){
-    const location = useLocation();
-    useEffect(() => {
-        if(window.gtag){
-            window.gtag('event', 'page_view', { 'send_to': 'G-SFPKRJDVT3' });
-        }
-    }, [location]);
-    return null;
+export default function useAnalytics() {
+  const href = useHref();
+  useEffect(() => {
+    if (window.gtag) {
+      window.gtag("event", "page_view", {
+        send_to: "G-SFPKRJDVT3",
+        page_location: window.origin + href.slice(1),
+      });
+    }
+  }, [href]);
+  return null;
 }
