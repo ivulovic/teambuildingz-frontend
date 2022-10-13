@@ -7,6 +7,7 @@ export default function Team({ members, name, description }) {
         <div className="team">
             {members.map((x, i) => (
              <Player
+                key={x.user.id}
                 width={100 - i * 10}
                 height={100 - i * 10}
                 image={x.user.image}

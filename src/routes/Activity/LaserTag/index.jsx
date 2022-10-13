@@ -1,11 +1,11 @@
-import { games } from "./data";
+import { activities } from "../../../db";
 import Activity from "../../../components/Activity";
 import Section from "../../../components/Section";
 import "./style.scss";
 import { Helmet } from "react-helmet-async";
 
 export default function LaserTag() {
-  const activities = games.map((x) => ({
+  const activities = activities.map((x) => ({
     id: x.id,
     title: x.name,
     date: x.date,

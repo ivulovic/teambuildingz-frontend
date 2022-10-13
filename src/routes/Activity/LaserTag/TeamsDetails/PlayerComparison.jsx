@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import Avatar from "../../../../components/Avatar";
-import { data } from "../data";
 import Section from "../../../../components/Section";
 import PlayerTargets from "./PlayerTargets";
 
-export default function PlayerComparison() {
+export default function PlayerComparison({data}) {
   const getUserById = (id) => data.statistic.find((x) => x.user.id === id);
 
   const [u1, setU1] = useState(0);
@@ -69,7 +68,7 @@ export default function PlayerComparison() {
             </h1>
           </div>
         </div>
-        <PlayerTargets primary={user1.user.id} secondary={user2.user.id} />
+        <PlayerTargets primary={user1.user.id} secondary={user2.user.id} data={data} />
       </div>
     </Section>
   );

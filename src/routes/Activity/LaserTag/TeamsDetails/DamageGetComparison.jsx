@@ -1,8 +1,7 @@
 import SingleBarChart from "../../../../components/Charts/SingleBar";
-import { data } from "../data";
 import Section from "../../../../components/Section";
 
-export default function DamageGet() {
+export default function DamageGet({data}) {
   const statistic = data.statistic.sort((a, z) => z.damageGet - a.damageGet).map((x, i) => {
     const { name } = x.user;
     return {

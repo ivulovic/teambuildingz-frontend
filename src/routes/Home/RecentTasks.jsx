@@ -1,10 +1,10 @@
 import React from "react";
-import { games } from "../Activity/LaserTag/data";
+import { activities } from "../../db";
 import Section from "../../components/Section";
 import Activity from "../../components/Activity";
 
 const RecentTasks = () => {
-  const recentLaserTag = games[0];
+  const recentLaserTag = activities[0];
 
   const recentCardItems = [
     {

@@ -23,10 +23,10 @@ export default function Activity({
             {/* <span className="date">{date}</span> */}
             <span className="members">
                 {membersToList.map((x, i) => (
-                   <>
+                   <div key={x.id}>
                     <Link to={`/activity/${path}/${id}/users/${x.id}`}>{x.name}</Link>
                     {i !== LIMIT - 1 ? <span>,&nbsp;</span> : <span>&nbsp;</span>}
-                    </>
+                    </div>
                 ))}
                 
                 <Link to={`/activity/${path}/${id}`}>+{membersLeft}</Link>

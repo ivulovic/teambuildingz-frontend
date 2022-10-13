@@ -1,8 +1,7 @@
 import SingleBarChart from "../../../../components/Charts/SingleBar";
-import { data } from "../data";
 import Section from "../../../../components/Section";
 
-export default function KillsComparison() {
+export default function KillsComparison({data}) {
   const statistic = data.statistic.sort((a, z) => z.kills - a.kills).map((x, i) => {
     const { name } = x.user;
     return {

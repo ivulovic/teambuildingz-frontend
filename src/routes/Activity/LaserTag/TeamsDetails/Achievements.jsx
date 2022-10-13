@@ -1,8 +1,7 @@
-import { data } from "../data";
 import Achievement from "../../../../components/Achievement";
 import Team from "../../../../components/Team";
 
-export default function Achievements() {
+export default function Achievements({data}) {
   const getValue = (key) => data.statistic.sort((a, z) => z[key] - a[key]);
   const getNestedValue = (key) =>
     data.statistic.sort((a, z) => a[key].total - z[key].total);

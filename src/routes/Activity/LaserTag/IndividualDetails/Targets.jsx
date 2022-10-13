@@ -1,9 +1,8 @@
 import { useMemo } from "react";
 import BarChart from "../../../../components/Charts/Bar";
-import { data } from "../data";
 import Section from "../../../../components/Section";
 
-export default function Targets({ id }) {
+export default function Targets({ id, data}) {
   const userStatistic = data.statistic.find((x) => x.user.id === id);
 
   const getPopulatedData = (key) => {

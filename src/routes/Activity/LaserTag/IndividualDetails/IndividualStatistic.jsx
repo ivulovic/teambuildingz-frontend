@@ -1,9 +1,9 @@
 import { GiBurningSkull } from "react-icons/gi";
 import { Link, useLocation, useParams } from "react-router-dom";
 import Player from "../../../../components/Player";
-import { data, Users } from "../data";
+import {Users } from "../../../../db";
 
-export default function IndividualStatistic({ id }) {
+export default function IndividualStatistic({ id, data }) {
   const userId = id;
   const params = useParams();
   const location = useLocation();

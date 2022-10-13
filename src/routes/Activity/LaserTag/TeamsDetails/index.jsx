@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import useActivityById from "../../../../hooks/useActivityById";
 import AccuracyComparison from "./AccuracyComparison";
 import Achievements from "./Achievements";
 import DamageDone from "./DamageDoneComparison";
@@ -10,20 +11,23 @@ import PlayerComparison from "./PlayerComparison";
 import RatingComparison from "./RatingComparison";
 import WoundsComparison from "./WoundsComparison";
 
-export default function Details(){
-    return <div className="page-layout">
-        <Helmet>
-            <title>Game Statistic | Teambuildingz</title>
-        </Helmet>
-        <Achievements />
-        <PlayerComparison />
-        <RatingComparison />
-        <AccuracyComparison />
-        <DamageDone />
-        <DamageGet />
-        <DeathsComparison />
-        <KillsComparison />
-        <HitsComparison />
-        <WoundsComparison />
+export default function Details() {
+  const data = useActivityById();
+  return (
+    <div className="page-layout">
+      <Helmet>
+        <title>Game Statistic | Teambuildingz</title>
+      </Helmet>
+      <Achievements data={data} />
+      <PlayerComparison data={data} />
+      <RatingComparison data={data} />
+      <AccuracyComparison data={data} />
+      <DamageDone data={data} />
+      <DamageGet data={data} />
+      <DeathsComparison data={data} />
+      <KillsComparison data={data} />
+      <HitsComparison data={data} />
+      <WoundsComparison data={data} />
     </div>
+  );
 }

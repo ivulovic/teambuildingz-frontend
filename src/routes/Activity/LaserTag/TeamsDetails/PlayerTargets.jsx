@@ -1,9 +1,8 @@
 import React from "react";
 import { BarChart, Bar, XAxis, ResponsiveContainer } from "recharts";
 import { useMemo } from "react";
-import { data } from "../data";
 
-export default function PlayerTargets({ primary, secondary }) {
+export default function PlayerTargets({ primary, secondary, data }) {
 
   const d = useMemo(() => {
     const keys = [
@@ -57,7 +56,7 @@ export default function PlayerTargets({ primary, secondary }) {
   return (
     <div className="inline-list no-gap">
       {d.map((x) => (
-        <ResponsiveContainer height={350}>
+        <ResponsiveContainer height={350} key={x.name}>
           <BarChart height={40} data={[x]} barGap={0} barCategoryGap={0}>
             <Bar
               dataKey="count"
