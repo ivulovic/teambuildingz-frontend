@@ -1,0 +1,112 @@
+.page-layout{
+    display: grid;
+    gap: 1rem;
+}
+
+.inline-list{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+    &.teams{
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: 1fr 0.3fr 1fr;
+        justify-content: space-between;
+        align-items: center;
+        .inline-list{
+            display: grid;
+            gap: 0rem;
+            row-gap: 0.5rem;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+.game-stats{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size);
+    text-transform: uppercase;
+    font-weight: 500;
+    opacity: 0.4;
+    transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    text-align: center;
+    gap: 0.5rem;
+    line-height: 1.25rem;
+    color: gray;
+    &:hover {
+        opacity: 1;
+        color: var(--accent);
+    }
+    span{
+        font-size: var(--font-size);
+    }
+    svg{
+        font-size: 3rem;
+    }
+}
+.individual-statistic{
+    gap: 1rem;
+    display: grid;
+    .player-header{
+        display: grid;
+        text-align: center;
+        justify-content: center;
+        button{
+            background-color: rgb(247 247 247);
+            text-align: center;
+            border:none;
+            font-weight: bold;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            padding: 0.25rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+        }
+        h1{
+            word-break: break-word;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        span{
+            min-width: 60px;
+            display: inline-block;
+        }
+    }
+}
+
+.uppercase{
+    text-transform: uppercase!important;
+}
+
+.text-character-1{
+    color: var(--character-1);
+}
+.text-character-2{
+    color: var(--character-2);
+}
+.text-positive{
+    color: var(--success);
+}
+.text-negative{
+    color: var(--accent);
+}
+.text-neutral{
+    color: #222;
+}
+.text-secondary{
+    color: #222;
+    opacity: 0.3;
+}
+.no-gap{
+    gap: 0;
+}
+.achievements{
+    overflow: hidden;
+}
+.achievements .inline-list{
+    gap: 0;
+}

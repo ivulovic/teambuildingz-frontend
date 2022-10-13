@@ -19,10 +19,10 @@
         font-weight: 400;
         text-align: center;
         &.small{
-            font-size: 0.65rem;
+            font-size: var(--font-size-sm);
             opacity: 0.4;
             font-weight: 500;
-            line-height: 0.6rem;
+            line-height: var(--font-size-sm);
         }
     }
 }

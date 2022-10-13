@@ -1,7 +1,7 @@
 import { games } from "./data";
 import Activity from "../../../components/Activity";
 import Section from "../../../components/Section";
-import "./style.css";
+import "./style.scss";
 import { Helmet } from "react-helmet-async";
 
 export default function LaserTag() {

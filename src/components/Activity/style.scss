@@ -1,6 +1,6 @@
 .activity{
     .title{
-        font-size: 0.75rem;
+        font-size: var(--font-size);
         font-weight: bold;
         color: var(--link);
         line-height: 2rem;
@@ -11,7 +11,7 @@
     .location,
     .date, 
     .members{
-        font-size: 0.75rem;
+        font-size: var(--font-size);
         opacity: 0.5;
     }
     .members{
