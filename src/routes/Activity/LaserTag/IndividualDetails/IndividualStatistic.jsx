@@ -1,7 +1,7 @@
 import { GiBurningSkull } from "react-icons/gi";
 import { Link, useLocation, useParams } from "react-router-dom";
 import Player from "../../../../components/Player";
-import {Users } from "../../../../db";
+import { Users } from "../../../../db";
 
 export default function IndividualStatistic({ id, data }) {
   const userId = id;
@@ -23,7 +23,9 @@ export default function IndividualStatistic({ id, data }) {
   return (
     <div className="individual-statistic">
       <div className="inline-list">
-        <Player width={70} height={70} image={user.image} name={user.name} />
+        <Link to={`/users/${user.id}`}>
+          <Player width={70} height={70} image={user.image} name={user.name} />
+        </Link>
       </div>
 
       <div className="inline-list teams">
@@ -36,18 +38,14 @@ export default function IndividualStatistic({ id, data }) {
                 to={`${getRootPathname()}/users/${x.id}`}
                 className="player-header"
               >
-                <Player
-                  image={x.image}
-                  name={x.name}
-                  nameClassName="small"
-                />
+                <Player image={x.image} name={x.name} nameClassName="small" />
               </Link>
             );
           })}
         </div>
-        <Link className="game-stats" to={`${getRootPathname()}/teams`}>
+        <Link className="game-stats" to={`${getRootPathname()}/statistic`}>
           <GiBurningSkull />
-          Game Statistic
+          STATISTIC
         </Link>
         <div className="inline-list">
           {opponentTeam.participants.map((x) => {
@@ -58,20 +56,12 @@ export default function IndividualStatistic({ id, data }) {
                 to={`${getRootPathname()}/users/${x.id}`}
                 className="player-header"
               >
-                <Player
-                  image={x.image}
-                  name={x.name}
-                  nameClassName="small"
-                />
+                <Player image={x.image} name={x.name} nameClassName="small" />
               </Link>
             );
           })}
         </div>
       </div>
-
-      {/* <Link className="link-team-statistics" to={`${getRootPathname()}/teams`}>
-        
-      </Link> */}
     </div>
   );
 }

@@ -5,10 +5,14 @@ import Activity from "./routes/Activity";
 import LaserTag from "./routes/Activity/LaserTag";
 import LaserTagIndividualDetails from "./routes/Activity/LaserTag/IndividualDetails";
 import LaserTagTeamsDetails from "./routes/Activity/LaserTag/TeamsDetails";
+import Users from "./routes/Users";
+import UsersOverview from "./routes/Users/Overview";
+import Profile from "./routes/Users/Profile";
+import Participants from "./routes/Activity/Participants";
 
 function App() {
   return (
-      <HashRouter>
+    <HashRouter>
       <Routes>
         <Route
           element={
@@ -26,18 +30,34 @@ function App() {
           }
           path="/activity"
         >
-            <Route path="" element={<Navigate to="laser-tag"/>} />
-            <Route path="laser-tag">
-              <Route path="" element={<LaserTag />} />
-              <Route path=":id">
-                <Route path="" element={<LaserTagIndividualDetails/>} />
-                <Route path="users">
-                  <Route path="" element={<LaserTagIndividualDetails/>} />
-                  <Route path=":userId" element={<LaserTagIndividualDetails/>} />
-                </Route>
-                <Route path="teams" element={<LaserTagTeamsDetails/>} />
+          <Route path="" element={<Navigate to="laser-tag" />} />
+          <Route path="laser-tag">
+            <Route path="" element={<LaserTag />} />
+            <Route path=":id">
+              <Route path="" element={<LaserTagIndividualDetails />} />
+              <Route path="participants" element={<Participants />} />
+              <Route path="users">
+                <Route path="" element={<LaserTagIndividualDetails />} />
+                <Route path=":userId" element={<LaserTagIndividualDetails />} />
               </Route>
+              <Route path="statistic" element={<LaserTagTeamsDetails />} />
             </Route>
+          </Route>
+        </Route>
+        <Route
+          path="/users"
+          element={
+            <MobileLayout>
+              <Users />
+            </MobileLayout>
+          }
+        >
+          <Route path="">
+            <Route path="" element={<UsersOverview />} />
+            <Route path=":id">
+              <Route path="" element={<Profile />} />
+            </Route>
+          </Route>
         </Route>
         <Route
           element={
@@ -48,7 +68,7 @@ function App() {
           path="*"
         />
       </Routes>
-      </HashRouter>
+    </HashRouter>
   );
 }
 

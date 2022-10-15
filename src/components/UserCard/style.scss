@@ -1,0 +1,23 @@
+.user-card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    &:hover{
+        opacity: 0.8;
+        // .username{
+        //   text-decoration: underline;
+        // }
+    }
+    .username{
+        font-size: var(--font-size-l);
+        font-weight: bold;
+        color: var(--link);
+        line-height: 2rem;
+        // transition: opacity 0.2s ease-in-out;
+    }
+    .bio{
+        font-size: var(--font-size);
+        opacity: 0.5;
+    }
+}

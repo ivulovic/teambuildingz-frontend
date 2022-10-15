@@ -1,7 +1,7 @@
 import Achievement from "../../../../components/Achievement";
 import Team from "../../../../components/Team";
 
-export default function Achievements({data}) {
+export default function Achievements({ data }) {
   const getValue = (key) => data.statistic.sort((a, z) => z[key] - a[key]);
   const getNestedValue = (key) =>
     data.statistic.sort((a, z) => a[key].total - z[key].total);
@@ -22,7 +22,9 @@ export default function Achievements({data}) {
           .filter((y) => y.teamId === x.id)
           .reduce((a, x) => a + x.rating, 0)
           .toFixed(2),
-        participants: data.statistic.filter(y => y.teamId === x.id).sort((a, z) => z.rating - a.rating)
+        participants: data.statistic
+          .filter((y) => y.teamId === x.id)
+          .sort((a, z) => z.rating - a.rating),
       });
     });
     return totalRating.sort((a, z) => z.totalRating - a.totalRating);
@@ -31,8 +33,8 @@ export default function Achievements({data}) {
 
   return (
     <div className="achievements">
-      <Team 
-        name={`Congratulations ${winner.name}!`}
+      <Team
+        name={`The ${winner.name} won!`}
         description={`${winner.name} had total rating ${winner.totalRating} compared to ${loser.name} who had ${loser.totalRating}.`}
         members={winner.participants}
       />

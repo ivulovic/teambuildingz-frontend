@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import BarChart from "../../../../components/Charts/Bar";
 import Section from "../../../../components/Section";
 
-export default function Targets({ id, data}) {
+export default function Targets({ id, data }) {
   const userStatistic = data.statistic.find((x) => x.user.id === id);
 
   const getPopulatedData = (key) => {
@@ -39,11 +39,11 @@ export default function Targets({ id, data}) {
 
   return (
     <>
-      <Section title="Hit" subtitle={"A hit you made to the opponent"}>
+      <Section title="Hits" subtitle={"A hit you made to the opponent"}>
         <BarChart data={hitsChartData} />
       </Section>
 
-      <Section title="Wound" subtitle={"A hit opponent made to you"}>
+      <Section title="Wounds" subtitle={"A hit opponent made to you"}>
         <BarChart data={woundsChartData} />
       </Section>
     </>

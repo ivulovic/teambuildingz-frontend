@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
-import useActivityById from "../../../../hooks/useActivityById";
+import { useParams } from "react-router-dom";
+import { useGetActivity } from "../../../../db";
 import AccuracyComparison from "./AccuracyComparison";
 import Achievements from "./Achievements";
 import DamageDone from "./DamageDoneComparison";
@@ -12,7 +13,8 @@ import RatingComparison from "./RatingComparison";
 import WoundsComparison from "./WoundsComparison";
 
 export default function Details() {
-  const data = useActivityById();
+  const { id } = useParams();
+  const data = useGetActivity(id);
   return (
     <div className="page-layout">
       <Helmet>

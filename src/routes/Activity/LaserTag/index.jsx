@@ -5,7 +5,7 @@ import "./style.scss";
 import { Helmet } from "react-helmet-async";
 
 export default function LaserTag() {
-  const activities = activities.map((x) => ({
+  const activitiesToMap = activities.map((x) => ({
     id: x.id,
     title: x.name,
     date: x.date,
@@ -24,7 +24,7 @@ export default function LaserTag() {
         subtitle="Activities you recently played"
       >
         <ul className="activity-list">
-          {activities.map((activity) => (
+          {activitiesToMap.map((activity) => (
             <Activity key={activity.id} path="laser-tag" {...activity} />
           ))}
         </ul>
