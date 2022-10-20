@@ -7,6 +7,12 @@ const getAvatarImage = (id, gender = "male") => {
 // const getAvatarImage = (id) => `https://robohash.org/${id}.png`;
 
 export const Users = {
+  unknown: {
+    id: "0",
+    name: "unknown",
+    username: "unknown",
+    image: getAvatarImage("unknown"),
+  },
   ivanv: {
     id: "1",
     name: "Ivan",
@@ -79,4 +85,89 @@ export const Users = {
     username: "bojans",
     image: getAvatarImage("bojans"),
   },
+  milenat: {
+    id: "13",
+    name: "Milena",
+    username: "milenat",
+    image: getAvatarImage("milenat"),
+  },
+  miodragt: {
+    id: "14",
+    name: "Miodrag",
+    username: "miodragt",
+    image: getAvatarImage("miodragt"),
+  },
+  ivanm: {
+    id: "15",
+    name: "Ivan M.",
+    username: "ivanm",
+    image: getAvatarImage("ivanm"),
+  },
+  savax: {
+    id: "16",
+    name: "Sava",
+    username: "savax",
+    image: getAvatarImage("savax"),
+  },
+  markob: {
+    id: "17",
+    name: "Marko",
+    username: "markob",
+    image: getAvatarImage("markob"),
+  },
+  jasminai: {
+    id: "18",
+    name: "Jasmina",
+    username: "jasminai",
+    image: getAvatarImage("jasminai"),
+  },
+  denisInstr: {
+    id: "19",
+    name: "Denis",
+    username: "denisInstr",
+    image: getAvatarImage("denisInstr"),
+  },
+  tasicInstr: {
+    id: "20",
+    name: "Tasic",
+    username: "tasicInstr",
+    image: getAvatarImage("tasicInstr"),
+  },
+  radosx: {
+    id: "21",
+    name: "Rados",
+    username: "radosx",
+    image: getAvatarImage("radosx"),
+  },
+  bratislavx: {
+    id: "22",
+    name: "Bratislav",
+    username: "bratislavx",
+    image: getAvatarImage("bratislavx"),
+  },
+  boskox: {
+    id: "23",
+    name: "Bosko",
+    username: "boskox",
+    image: getAvatarImage("boskox"),
+  },
+  igorx: {
+    id: "24",
+    name: "Igor",
+    username: "igorx",
+    image: getAvatarImage("igorx"),
+  },
+  aleksandarx: {
+    id: "25",
+    name: "Aleksandar",
+    username: "aleksandarx",
+    image: getAvatarImage("aleksandarx"),
+  },
+  milosv: {
+    id: "26",
+    name: "Milos",
+    username: "milosv",
+    image: getAvatarImage("milosv"),
+  },
+  
 };

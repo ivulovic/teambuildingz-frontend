@@ -1,0 +1,35 @@
+export default function makeStatistic(
+    user,
+    teamId,
+    rating,
+    kills,
+    accuracy,
+    shotFired,
+    hits,
+    wounds,
+    damagePerShot,
+    damageDone,
+    damageGet,
+    gameOver,
+    medicine,
+    ammoBoxes,
+    gameTime
+){
+    return {
+        user,
+        teamId,
+        rating,
+        kills,
+        accuracy,
+        shotFired,
+        hits,
+        wounds,
+        damagePerShot,
+        damageDone,
+        gameOver,
+        damageGet,
+        medicine,
+        ammoBoxes,
+        gameTime,
+    };
+}

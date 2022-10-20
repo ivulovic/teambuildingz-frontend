@@ -1,8 +1,8 @@
 import { Users } from "../users";
 
 export const data = {
-    id: '1',
-    name: 'Laser Tag',
+    id: '15',
+    name: 'Laser War',
     organization: 'LaserWar',
     location: 'Kamenički park',
     date: '05.10.2022.',

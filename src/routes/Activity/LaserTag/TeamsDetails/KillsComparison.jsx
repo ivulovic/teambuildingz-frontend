@@ -1,15 +1,22 @@
 import SingleBarChart from "../../../../components/Charts/SingleBar";
 import Section from "../../../../components/Section";
 
-export default function KillsComparison({data}) {
-  const statistic = data.statistic.sort((a, z) => z.kills - a.kills).map((x, i) => {
-    const { name } = x.user;
-    return {
-      name,
-      value: x.kills,
-      fill: `var(--character-${x.teamId})`,
-    };
-  });
+export default function KillsComparison({ data }) {
+  const statistic = data.statistic
+    .sort((a, z) => z.kills - a.kills)
+    .map((x, i) => {
+      const { name } = x.user;
+      return {
+        name,
+        value: x.kills,
+        fill: `var(--character-${x.teamId})`,
+      };
+    })
+    .filter((x) => !!x.value);
+
+  if (!statistic.length) {
+    return <></>;
+  }
 
   return (
     <Section
