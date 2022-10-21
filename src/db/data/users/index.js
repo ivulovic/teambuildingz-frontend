@@ -151,11 +151,11 @@ export const Users = {
     username: "boskox",
     image: getAvatarImage("boskox"),
   },
-  igorx: {
+  igors: {
     id: "24",
     name: "Igor",
-    username: "igorx",
-    image: getAvatarImage("igorx"),
+    username: "igors",
+    image: getAvatarImage("igors"),
   },
   aleksandarx: {
     id: "25",
@@ -168,6 +168,48 @@ export const Users = {
     name: "Milos",
     username: "milosv",
     image: getAvatarImage("milosv"),
+  },
+  hristinab: {
+    id: "27",
+    name: "Hristina",
+    username: "hristinab",
+    image: getAvatarImage("hristinab"),
+  },
+  ivanar: {
+    id: "28",
+    name: "Ivana",
+    username: "ivanar",
+    image: getAvatarImage("ivanar"),
+  },
+  nikolaCkode: {
+    id: "29",
+    name: "Nikola Ckode",
+    username: "nikolaCkode",
+    image: getAvatarImage("nikolaCkode"),
+  },
+  boskoz: {
+    id: "30",
+    name: "Bosko Z",
+    username: "boskoz",
+    image: getAvatarImage("boskoz"),
+  },
+  sanjaz: {
+    id: "31",
+    name: "Sanja",
+    username: "sanjaz",
+    image: getAvatarImage("sanjaz"),
+  },
+  milutinv: {
+    id: "32",
+    name: "Milutin",
+    username: "milutinv",
+    image: getAvatarImage("milutinv"),
+  },
+  brankob: {
+    id: "33",
+    name: "Branko",
+    username: "brankob",
+    image: getAvatarImage("brankob"),
   },
   
 };

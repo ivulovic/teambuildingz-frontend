@@ -5,15 +5,21 @@ import { data as a05102022 } from './data/laser-war/05102022';
 import { data as a05072018 } from './data/laser-tag/05072018';
 import { data as a12072018 } from './data/laser-tag/12072018';
 import { data as a17072018 } from './data/laser-tag/17072018';
+import { data as a26072018 } from './data/laser-tag/26072018';
+import { data as a14082018 } from './data/laser-tag/14082018';
+import { data as a23082018 } from './data/laser-tag/23082018';
 
 import { Users } from './data/users';
 export { Users } from './data/users';
 
 export const activities = [
   a05102022,
-  a05072018,
+  a23082018,
+  a14082018,
+  a26072018,
+  a17072018,
   a12072018,
-  a17072018
+  a05072018,
 ]
 
 export function useGetUsers(){
