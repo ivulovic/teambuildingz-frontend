@@ -10,13 +10,13 @@ export const data = {
     date: '05.07.2018.',
     participants: [
         Users.milenat,
-        Users.terza,
-        Users.smiljandj,
-        Users.ivanm,
-        Users.savax,
-        Users.tijanat,
-        Users.markob,
-        Users.bojans
+          Users.ivanm,
+          Users.tijanat,
+          Users.bojans,
+          Users.terza,
+          Users.smiljandj,
+          Users.savax,
+          Users.markob,
     ],
     teams: [
       {

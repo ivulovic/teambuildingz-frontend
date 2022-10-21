@@ -1,3 +1,4 @@
+import { Teams } from "../teams";
 import { Users } from "../users";
 
 export const data = {
@@ -7,12 +8,22 @@ export const data = {
     location: 'Kamenički park',
     date: '05.10.2022.',
     participants: [
-        Users.ivanv, Users.milanr, Users.lazarp, Users.mimiz, Users.mirak, Users.smiljandj, Users.janam, Users.igorj, Users.tijanat, Users.draganat, Users.darkos, Users.bojans
+         Users.ivanv,
+          Users.milanr,
+          Users.lazarp,
+          Users.mimiz,
+          Users.mirak,
+          Users.smiljandj,
+          Users.janam,
+          Users.igorj,
+          Users.tijanat,
+          Users.draganat,
+          Users.darkos,
+          Users.bojans,
     ],
     teams: [
       {
-        id: '1',
-        name: 'Red Team',
+        ...Teams.Red,
         participants: [
           Users.ivanv,
           Users.milanr,
@@ -23,8 +34,7 @@ export const data = {
         ]
       },
       {
-        id: '2',
-        name: 'Blue Team',
+        ...Teams.Blue,
         participants: [
           Users.janam,
           Users.igorj,

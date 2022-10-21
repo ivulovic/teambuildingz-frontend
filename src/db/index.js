@@ -34,9 +34,10 @@ export function useGetActivity(id){
 export function useGetUserActivities(id){ 
   let actvts = [];
   activities.forEach(activity => {
+    console.log(activity, id)
     const hasParticipated = activity.participants.find(x => x.id === id);
     if(hasParticipated){
-      const activityIndex = actvts.findIndex(x => x.name === activity.name);
+      const activityIndex = actvts.findIndex(y => y.name === activity.name);
       if(activityIndex > -1){
         actvts = actvts.map((a, i) => i === activityIndex ? ({
           ...a, 
