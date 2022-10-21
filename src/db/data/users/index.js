@@ -91,11 +91,11 @@ export const Users = {
     username: "milenat",
     image: getAvatarImage("milenat"),
   },
-  miodragt: {
+  terza: {
     id: "14",
-    name: "Miodrag",
-    username: "miodragt",
-    image: getAvatarImage("miodragt"),
+    name: "Terza",
+    username: "terza",
+    image: getAvatarImage("terza"),
   },
   ivanm: {
     id: "15",
@@ -145,11 +145,11 @@ export const Users = {
     username: "bratislavx",
     image: getAvatarImage("bratislavx"),
   },
-  boskox: {
+  boskov: {
     id: "23",
-    name: "Bosko",
-    username: "boskox",
-    image: getAvatarImage("boskox"),
+    name: "Bole",
+    username: "boskov",
+    image: getAvatarImage("boskov"),
   },
   igors: {
     id: "24",
@@ -210,6 +210,18 @@ export const Users = {
     name: "Branko",
     username: "brankob",
     image: getAvatarImage("brankob"),
+  },
+  stankob: {
+    id: "34",
+    name: "Stanko",
+    username: "stankob",
+    image: getAvatarImage("stankob"),
+  },
+  anam: {
+    id: "35",
+    name: "Ana",
+    username: "anam",
+    image: getAvatarImage("anam"),
   },
   
 };

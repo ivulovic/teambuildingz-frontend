@@ -10,7 +10,7 @@ export const data = {
     date: '05.07.2018.',
     participants: [
         Users.milenat,
-        Users.miodragt,
+        Users.terza,
         Users.smiljandj,
         Users.ivanm,
         Users.savax,
@@ -31,7 +31,7 @@ export const data = {
       {
         ...Teams.Blue,
         participants: [
-          Users.miodragt,
+          Users.terza,
           Users.smiljandj,
           Users.savax,
           Users.markob,
@@ -53,7 +53,7 @@ export const data = {
                     { target: Users.smiljandj, count: 12 },
                     { target: Users.markob, count: 12 },
                     { target: Users.savax, count: 13 },
-                    { target: Users.miodragt, count: 8 },
+                    { target: Users.terza, count: 8 },
                 ]
             },
             {
@@ -64,7 +64,7 @@ export const data = {
                     { target: Users.smiljandj, count: 12 },
                     { target: Users.markob, count: 11 },
                     { target: Users.savax, count: 8 },
-                    { target: Users.miodragt, count: 8 },
+                    { target: Users.terza, count: 8 },
                 ]
             },
             50,
@@ -77,7 +77,7 @@ export const data = {
         ),
 
         makeStatistic(
-            Users.miodragt,
+            Users.terza,
             Teams.Blue.id,
             30.6,
             undefined,
@@ -127,7 +127,7 @@ export const data = {
                     {target: Users.milenat, count: 12},
                     {target: Users.tijanat, count: 18},
                     {target: Users.markob, count: 1},
-                    {target: Users.miodragt, count: 1},
+                    {target: Users.terza, count: 1},
                 ]
             },
             {
@@ -163,7 +163,7 @@ export const data = {
                     { target: Users.smiljandj, count: 22 },
                     { target: Users.markob, count: 24 },
                     { target: Users.savax, count: 20 },
-                    { target: Users.miodragt, count: 22 },
+                    { target: Users.terza, count: 22 },
                 ]
             },
             {
@@ -174,7 +174,7 @@ export const data = {
                     { target: Users.smiljandj, count: 16 },
                     { target: Users.markob, count: 14 },
                     { target: Users.savax, count: 5 },
-                    { target: Users.miodragt, count: 19 },
+                    { target: Users.terza, count: 19 },
                 ]
             },
             50,
@@ -200,7 +200,7 @@ export const data = {
                     {target: Users.milenat, count: 8},
                     {target: Users.tijanat, count: 17},
                     {target: Users.markob, count: 2},
-                    {target: Users.miodragt, count: 1},
+                    {target: Users.terza, count: 1},
                 ]
             },
             {
@@ -212,7 +212,7 @@ export const data = {
                     {target: Users.milenat, count: 13},
                     {target: Users.tijanat, count: 37},
                     {target: Users.markob, count: 3},
-                    {target: Users.miodragt, count: 1},
+                    {target: Users.terza, count: 1},
                 ]
             },
             50,
@@ -239,7 +239,7 @@ export const data = {
                     {target: Users.smiljandj, count: 26},
                     {target: Users.markob, count: 27},
                     {target: Users.savax, count: 37},
-                    {target: Users.miodragt, count: 18},
+                    {target: Users.terza, count: 18},
                 ]
             },
             {
@@ -250,7 +250,7 @@ export const data = {
                     {target: Users.smiljandj, count: 18},
                     {target: Users.markob, count: 18},
                     {target: Users.savax, count: 17},
-                    {target: Users.miodragt, count: 22},
+                    {target: Users.terza, count: 22},
                 ]
             },
             50,
@@ -314,7 +314,7 @@ export const data = {
                     {target: Users.smiljandj, count: 30},
                     {target: Users.markob, count: 37},
                     {target: Users.savax, count: 54},
-                    {target: Users.miodragt, count: 30},
+                    {target: Users.terza, count: 30},
                 ]
             },
             {
@@ -326,7 +326,7 @@ export const data = {
                     {target: Users.smiljandj, count: 18},
                     {target: Users.markob, count: 17},
                     {target: Users.savax, count: 12},
-                    {target: Users.miodragt, count: 17},
+                    {target: Users.terza, count: 17},
                 ]
             },
             50,

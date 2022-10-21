@@ -19,7 +19,7 @@ export const data = {
             Users.mirak,
             Users.sanjaz,
             Users.brankob,
-            Users.miodragt,
+            Users.terza,
             Users.milosv
     ],
     teams: [
@@ -41,7 +41,7 @@ export const data = {
             Users.mirak,
             Users.sanjaz,
             Users.brankob,
-            Users.miodragt,
+            Users.terza,
             Users.milosv
         ]
       },
@@ -58,7 +58,7 @@ export const data = {
                 total: 79,
                 data: [
                     {target: Users.mirak, count: 2},
-                    {target: Users.miodragt, count: 2},
+                    {target: Users.terza, count: 2},
                     {target: Users.milosv, count: 1},
                     {target: Users.bojans, count: 13},
                     {target: Users.hristinab, count: 15},
@@ -139,7 +139,7 @@ export const data = {
                 total: 22,
                 data: [
                     {target: Users.nikolaCkode, count: 2},
-                    {target: Users.miodragt, count: 2},
+                    {target: Users.terza, count: 2},
                     {target: Users.bojans, count: 3},
                     {target: Users.hristinab, count: 4},
                     {target: Users.boskoz, count: 1},
@@ -153,7 +153,7 @@ export const data = {
                 data: [
                     {target: Users.mirak, count: 1},
                     {target: Users.brankob, count: 3},
-                    {target: Users.miodragt, count: 2},
+                    {target: Users.terza, count: 2},
                     {target: Users.milosv, count: 1},
                     {target: Users.bojans, count: 30},
                     {target: Users.hristinab, count: 14},
@@ -210,7 +210,7 @@ export const data = {
             undefined
         ),
         makeStatistic(
-            Users.miodragt,
+            Users.terza,
             Teams.Red.id,
             18.7,
             undefined,
@@ -305,7 +305,7 @@ export const data = {
                     {target: Users.mirak, count: 16},
                     {target: Users.sanjaz, count: 30},
                     {target: Users.brankob, count: 21},
-                    {target: Users.miodragt, count: 21},
+                    {target: Users.terza, count: 21},
                     {target: Users.milosv, count: 24},
                     {target: Users.hristinab, count: 1},
                     {target: Users.tijanat, count: 1},
@@ -319,7 +319,7 @@ export const data = {
                     {target: Users.mirak, count: 5},
                     {target: Users.sanjaz, count: 3},
                     {target: Users.brankob, count: 17},
-                    {target: Users.miodragt, count: 8},
+                    {target: Users.terza, count: 8},
                     {target: Users.milosv, count: 20},
                     {target: Users.hristinab, count: 3},
                 ]
@@ -346,7 +346,7 @@ export const data = {
                     {target: Users.mirak, count: 9},
                     {target: Users.sanjaz, count: 14},
                     {target: Users.brankob, count: 12},
-                    {target: Users.miodragt, count: 11},
+                    {target: Users.terza, count: 11},
                     {target: Users.milosv, count: 12},
                     {target: Users.bojans, count: 3},
                     {target: Users.tijanat, count: 2},
@@ -360,7 +360,7 @@ export const data = {
                     {target: Users.mirak, count: 7},
                     {target: Users.sanjaz, count: 4},
                     {target: Users.brankob, count: 25},
-                    {target: Users.miodragt, count: 19},
+                    {target: Users.terza, count: 19},
                     {target: Users.milosv, count: 11},
                     {target: Users.bojans, count: 1},
                 ]
@@ -387,7 +387,7 @@ export const data = {
                     {target: Users.mirak, count: 15},
                     {target: Users.sanjaz, count: 35},
                     {target: Users.brankob, count: 19},
-                    {target: Users.miodragt, count: 36},
+                    {target: Users.terza, count: 36},
                     {target: Users.milosv, count: 36},
                     {target: Users.bojans, count: 1},
                     {target: Users.tijanat, count: 1},
@@ -401,7 +401,7 @@ export const data = {
                     {target: Users.mirak, count: 4},
                     {target: Users.sanjaz, count: 6},
                     {target: Users.brankob, count: 12},
-                    {target: Users.miodragt, count: 10},
+                    {target: Users.terza, count: 10},
                     {target: Users.milosv, count: 25},
                     {target: Users.bojans, count: 1},
                 ]
@@ -428,7 +428,7 @@ export const data = {
                     {target: Users.mirak, count: 12},
                     {target: Users.sanjaz, count: 21},
                     {target: Users.brankob, count: 14},
-                    {target: Users.miodragt, count: 19},
+                    {target: Users.terza, count: 19},
                     {target: Users.milosv, count: 14},
                     {target: Users.bojans, count: 2},
                 ]
@@ -440,7 +440,7 @@ export const data = {
                     {target: Users.mirak, count: 2},
                     {target: Users.sanjaz, count: 1},
                     {target: Users.brankob, count: 21},
-                    {target: Users.miodragt, count: 2},
+                    {target: Users.terza, count: 2},
                     {target: Users.milosv, count: 7},
                     {target: Users.milenat, count: 1},
                 ]
@@ -468,7 +468,7 @@ export const data = {
                     {target: Users.mirak, count: 15},
                     {target: Users.sanjaz, count: 16},
                     {target: Users.brankob, count: 15},
-                    {target: Users.miodragt, count: 9},
+                    {target: Users.terza, count: 9},
                     {target: Users.milosv, count: 17},
                     {target: Users.bojans, count: 1},
                     {target: Users.hristinab, count: 1},
@@ -481,7 +481,7 @@ export const data = {
                     {target: Users.mirak, count: 8},
                     {target: Users.sanjaz, count: 3},
                     {target: Users.brankob, count: 13},
-                    {target: Users.miodragt, count: 8},
+                    {target: Users.terza, count: 8},
                     {target: Users.milosv, count: 16},
                     {target: Users.bojans, count: 1},
                     {target: Users.hristinab, count: 1},
@@ -510,7 +510,7 @@ export const data = {
                     {target: Users.mirak, count: 5},
                     {target: Users.sanjaz, count: 14},
                     {target: Users.brankob, count: 7},
-                    {target: Users.miodragt, count: 18},
+                    {target: Users.terza, count: 18},
                     {target: Users.milosv, count: 15},
                     {target: Users.bojans, count: 1},
                     {target: Users.boskoz, count: 1},
@@ -523,7 +523,7 @@ export const data = {
                     {target: Users.mirak, count: 3},
                     {target: Users.sanjaz, count: 1},
                     {target: Users.brankob, count: 10},
-                    {target: Users.miodragt, count: 11},
+                    {target: Users.terza, count: 11},
                     {target: Users.milosv, count: 21},
                 ]
             },
