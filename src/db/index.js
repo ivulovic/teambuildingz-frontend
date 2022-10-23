@@ -9,12 +9,24 @@ import { data as a26072018 } from './data/laser-tag/26072018';
 import { data as a14082018 } from './data/laser-tag/14082018';
 import { data as a23082018 } from './data/laser-tag/23082018';
 import { data as a26092019 } from './data/laser-tag/26092019';
+import { data as a04102019 } from './data/laser-tag/04102019';
+import { data as a18102019 } from './data/laser-tag/18102019';
+import { data as a24102019 } from './data/laser-tag/24102019';
+import { data as a31102019 } from './data/laser-tag/31102019';
+import { data as a06112019 } from './data/laser-tag/06112019';
+import { data as a13112019 } from './data/laser-tag/13112019';
 
 import { Users } from './data/users';
 export { Users } from './data/users';
 
 export const activities = [
   a05102022,
+  a13112019,
+  a06112019,
+  a31102019,
+  a24102019,
+  a18102019,
+  a04102019,
   a26092019,
   a23082018,
   a14082018,

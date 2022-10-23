@@ -223,5 +223,22 @@ export const Users = {
     username: "anam",
     image: getAvatarImage("anam"),
   },
-  
+  mikax: {
+    id: "36",
+    name: "Mika",
+    username: "mikax",
+    image: getAvatarImage("mikax"),
+  },
+  predragm: {
+    id: "37",
+    name: "Pedja",
+    username: "predragm",
+    image: getAvatarImage("predragm"),
+  },
+  jelenad: {
+    id: "38",
+    name: "Jelena",
+    username: "jelenad",
+    image: getAvatarImage("jelenad"),
+  },
 };

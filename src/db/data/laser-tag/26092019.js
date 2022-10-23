@@ -6,7 +6,7 @@ export const data = {
     id: '7',
     name: 'Laser Tag',
     organization: 'LaserTag',
-    location: 'Beograd, Stari Kluz',
+    location: 'Kluz Zvezdara',
     date: '26.09.2019.',
     participants: [   
         Users.ivanv, // ivanm
