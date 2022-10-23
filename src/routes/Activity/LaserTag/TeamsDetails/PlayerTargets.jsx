@@ -3,14 +3,13 @@ import { BarChart, Bar, XAxis, ResponsiveContainer } from "recharts";
 import { useMemo } from "react";
 
 export default function PlayerTargets({ primary, secondary, data }) {
-
   const d = useMemo(() => {
     const keys = [
-        { key: "rating", label: "Rating" },
-        { key: "accuracy", label: "Accuracy" },
-        { key: "kills", label: "Kills" },
-        { key: "gameOver", label: "Deaths" },
-      ];
+      { key: "rating", label: "Rating" },
+      { key: "accuracy", label: "Accuracy" },
+      { key: "kills", label: "Kills" },
+      { key: "gameOver", label: "Deaths" },
+    ];
     const mainStatistic = data.statistic.find((x) => x.user.id === primary);
     const secondaryStatistic = data.statistic.find(
       (x) => x.user.id === secondary
@@ -57,13 +56,25 @@ export default function PlayerTargets({ primary, secondary, data }) {
     <div className="inline-list no-gap">
       {d.map((x) => (
         <ResponsiveContainer height={350} key={x.name}>
-          <BarChart height={40} data={[x]} barGap={0} barCategoryGap={0}>
+          <BarChart
+            margin={{
+              top: 16,
+              right: 0,
+              left: 0,
+              bottom: 0,
+            }}
+            height={40}
+            data={[x]}
+            barGap={0}
+            barCategoryGap={1}
+          >
             <Bar
               dataKey="count"
               stackId="a"
               fill="var(--character-1)"
               label={{
-                fill: "white",
+                fill: "gray",
+                position: "top",
                 fontSize: 8,
                 textShadow: "10px 10px 10px black",
               }}
@@ -72,7 +83,11 @@ export default function PlayerTargets({ primary, secondary, data }) {
               dataKey="compared"
               stackId="b"
               fill="var(--character-2)"
-              label={{ fill: "white", fontSize: 8 }}
+              label={{
+                fontSize: 8,
+                fill: "gray",
+                position: "top",
+              }}
             />
             <XAxis
               dataKey="name"
