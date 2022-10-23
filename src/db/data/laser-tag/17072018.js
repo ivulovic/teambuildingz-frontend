@@ -7,7 +7,7 @@ export const data = {
     name: 'Laser Tag',
     organization: 'LaserTag',
     location: 'Kluz Zvezdara',
-    date: '12.07.2018.',
+    date: '17.07.2018.',
     participants: [
             Users.unknown,
             Users.milenat,
