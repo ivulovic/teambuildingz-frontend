@@ -1,11 +1,10 @@
+import { Activities } from "../activities";
 import { Teams } from "../teams";
 import { Users } from "../users";
 
 export const data = {
     id: '15',
-    name: 'Laser War',
-    organization: 'LaserWar',
-    location: 'Kamenički park',
+    activity: Activities.LaserWar,
     date: '05.10.2022.',
     participants: [
          Users.ivanv,

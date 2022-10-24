@@ -1,12 +1,11 @@
+import { Activities } from "../activities";
 import { Teams } from "../teams";
 import { Users } from "../users";
 import makeStatistic from "./makeStatistic";
 
 export const data = {
     id: '14',
-    name: 'Laser Tag',
-    organization: 'LaserTag',
-    location: 'Kluz Zvezdara',
+    activity: Activities.LaserTag,
     date: '13.11.2019.',
     participants: [   
         Users.ivanv,

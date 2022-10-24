@@ -64,7 +64,7 @@ export const Users = {
   tijanat: {
     id: "9",
     name: "Tijana",
-    username: "tijant",
+    username: "tijanat",
     image: getAvatarImage("tijanat", "female"),
   },
   draganat: {

@@ -3,15 +3,7 @@ import "./style.scss";
 
 const LIMIT = 4;
 
-export default function Activity({
-  id,
-  path,
-  title,
-  date,
-  members,
-  location,
-  organization,
-}) {
+export default function Activity({ id, path, title, date, members, location }) {
   const membersToList = members.slice(0, LIMIT);
 
   const membersLeft = members.length - LIMIT;
@@ -25,7 +17,6 @@ export default function Activity({
         <span className="location">
           {location}, {date}
         </span>
-        {/* <span className="date">{date}</span> */}
         <span className="members">
           {membersToList.map((x, i) => (
             <div key={x.id}>
