@@ -9,6 +9,9 @@ import Users from "./routes/Users";
 import UsersOverview from "./routes/Users/Overview";
 import Profile from "./routes/Users/Profile";
 import Participants from "./routes/Activity/Participants";
+import Explore from "./routes/Explore";
+import ExploreOverview from "./routes/Explore/Overview";
+import ExploreDetails from "./routes/Explore/Details";
 
 function App() {
   return (
@@ -56,6 +59,21 @@ function App() {
             <Route path="" element={<UsersOverview />} />
             <Route path=":id">
               <Route path="" element={<Profile />} />
+            </Route>
+          </Route>
+        </Route>
+        <Route
+          path="/explore"
+          element={
+            <MobileLayout>
+              <Explore />
+            </MobileLayout>
+          }
+        >
+          <Route path="">
+            <Route path="" element={<ExploreOverview />} />
+            <Route path=":id">
+              <Route path="" element={<ExploreDetails />} />
             </Route>
           </Route>
         </Route>

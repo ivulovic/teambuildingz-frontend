@@ -1,6 +1,7 @@
 import React from "react";
 import useAnalytics from "../../hooks/useAnalytics";
 import Header from "../Header";
+import Navigation from "../Navigation";
 import "./style.scss";
 
 const MobileLayout = ({ children }) => {
@@ -12,6 +13,7 @@ const MobileLayout = ({ children }) => {
       <div className="mobile-layout">
         <div className="mobile-body">{children}</div>
       </div>
+      <Navigation />
     </>
   );
 };

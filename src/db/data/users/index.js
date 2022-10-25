@@ -1,5 +1,5 @@
 const getAvatarImage = (id, gender = "male") => {
-  const r = `https://avatars.dicebear.com/api/big-ears/${id}.svg?skinColor=variant02`;
+  const r = `https://avatars.dicebear.com/api/bottts/${id}.svg`;
   // ${gender =='female'?'&hair=straightHair':''}`;
   return r;
 };

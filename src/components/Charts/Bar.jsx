@@ -2,7 +2,7 @@ import { ResponsiveContainer, BarChart, XAxis, Bar } from "recharts";
 
 export default function BarChartComponent({ data }) {
   return (
-    <ResponsiveContainer width={"99%"} height={250}>
+    <ResponsiveContainer width={"99%"} height={350}>
       <BarChart
         data={data}
         margin={{

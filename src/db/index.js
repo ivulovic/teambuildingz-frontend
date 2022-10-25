@@ -10,6 +10,7 @@ import { data as a14082018 } from './data/laser-tag/14082018';
 import { data as a23082018 } from './data/laser-tag/23082018';
 import { data as a26092019 } from './data/laser-tag/26092019';
 import { data as a04102019 } from './data/laser-tag/04102019';
+import { data as a08102019 } from './data/laser-tag/08102019';
 import { data as a18102019 } from './data/laser-tag/18102019';
 import { data as a24102019 } from './data/laser-tag/24102019';
 import { data as a31102019 } from './data/laser-tag/31102019';
@@ -18,6 +19,7 @@ import { data as a13112019 } from './data/laser-tag/13112019';
 
 import { Users } from './data/users';
 import { Activities } from './data/activities';
+import { useMemo } from 'react';
 export { Users } from './data/users';
 
 const laserTag = {
@@ -28,6 +30,7 @@ const laserTag = {
     a31102019,
     a24102019,
     a18102019,
+    a08102019,
     a04102019,
     a26092019,
     a23082018,
@@ -51,6 +54,31 @@ export const activities = [
   ...laserTag.data
 ]
 
+export function useGetActivities(){
+  return [
+    laserWar,
+    laserTag,
+  ]
+};
+
+export function useGetAllParticipantPerActivity(activityId){
+  const users = useGetUsers();
+  const allActivities = useGetActivities();
+  const activity = allActivities.find(x => x.id === activityId);
+  const uniqueUsers = useMemo(() => {
+    const userIds = [];
+    activity.data.forEach(x => {
+      x.participants.forEach(x => {
+        if(!userIds.includes(x.id)){
+          userIds.push(x.id);
+        }
+      });
+    });
+    return userIds;
+  }, [activity])
+  return uniqueUsers.map(x => users[x]);
+}
+
 export function useGetUsers(){
   return Object.values(Users);
 }
@@ -58,6 +86,7 @@ export function useGetUsers(){
 export function useGetActivity(id){
   return activities.find(x => x.id === id);
 }
+
 export function useGetUserActivities(id){ 
   let activitiesAggregated = [];
   activities.forEach(({activity, participants}) => {
@@ -83,6 +112,7 @@ export function useGetUserActivities(id){
 }
 
 export function useGetUserLaserWarAverageData(userId){
+  const users = useGetUsers();
   const data = laserWar.data.filter(activity => activity.participants.find(participant => participant.id === userId));
   const avgData = {
     rating: 0,
@@ -103,6 +133,7 @@ export function useGetUserLaserWarAverageData(userId){
   }
   const length = data.length;
   const avg = {
+    user: users.find(x => x.id ===userId),
     data: [
       // {name: "APROXIMATE RATING", value: Number((avgData.rating / length)*(1+(data.length === 1 ? 0 : data.length/10))).toFixed(2)},
       ...Object.keys(avgData).map((key) => ({name: `AVERAGE ${key.toUpperCase()}`, value: Number(avgData[key] / length).toFixed(2)})),
@@ -114,6 +145,7 @@ export function useGetUserLaserWarAverageData(userId){
 }
 
 export function useGetUserLaserTagAverageData(userId){
+  const users = useGetUsers();
   const data = laserTag.data.filter(activity => activity.participants.find(participant => participant.id === userId));
   const avgData = {
     rating: 0,
@@ -132,6 +164,7 @@ export function useGetUserLaserTagAverageData(userId){
   }
   const length = data.length;
   const avg = {
+    user: users.find(x => x.id ===userId),
     data: [
       // {name: "APROXIMATE RATING", value: Number((avgData.rating / length)*(1+(data.length === 1 ? 0 : data.length/10))).toFixed(2)},
       ...Object.keys(avgData).map((key) => ({name: `AVERAGE ${key.toUpperCase()}`, value: Number(avgData[key] / length).toFixed(2)})),

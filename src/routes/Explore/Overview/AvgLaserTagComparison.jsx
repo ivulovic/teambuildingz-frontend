@@ -1,24 +1,26 @@
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
-import Avatar from "../../../../components/Avatar";
-import Section from "../../../../components/Section";
-import { Activities } from "../../../../db/data/activities";
-import PlayerTargets from "./PlayerTargets";
+import Avatar from "../../../components/Avatar";
+import Section from "../../../components/Section";
+import { useGetUserLaserTagAverageData } from "../../../db";
+import { Activities } from "../../../db/data/activities";
+import ChartComparison from "./ChartComparison";
 
-export default function PlayerComparison({ data }) {
-  const navigate = useNavigate();
+export default function AvgLaserTagComparison({ participants }) {
   const location = useLocation();
+  const navigate = useNavigate();
   const [search] = useSearchParams();
-  const getUserById = (id) => data.statistic.find((x) => x.user.id === id);
-
-  const [u1, setU1] = useState(Number(search.get("u1")) || 0);
-  const [u2, setU2] = useState(Number(search.get("u2")) || 0);
+  const [u1, setU1] = useState(
+    search.get("id") === Activities.LaserTag.id ? Number(search.get("u1")) : 0
+  );
+  const [u2, setU2] = useState(
+    search.get("id") === Activities.LaserTag.id ? Number(search.get("u2")) : 1
+  );
 
   const handleChange = (direction, v, type) => {
     const value = Number(v);
-    const tIndex = type === "u1" ? 0 : 1;
-    const maxPlayers = data.teams[tIndex].participants.length - 1;
+    const maxPlayers = participants.length - 1;
     if (direction < 0) {
       const nextId = value - 1;
       return nextId <= 0 ? 0 : nextId;
@@ -32,7 +34,7 @@ export default function PlayerComparison({ data }) {
     const newV = handleChange(direction, value, type);
     setU1(newV);
     navigate(
-      `${location.pathname}?id=${data.activity.id}&u1=${newV}&u2=${u2}`,
+      `${location.pathname}?id=${Activities.LaserTag.id}&u1=${newV}&u2=${u2}`,
       { replace: true }
     );
   };
@@ -40,13 +42,20 @@ export default function PlayerComparison({ data }) {
     const newV = handleChange(direction, value, type);
     setU2(newV);
     navigate(
-      `${location.pathname}?id=${data.activity.id}&u1=${u1}&u2=${newV}`,
+      `${location.pathname}?id=${Activities.LaserTag.id}&u1=${u1}&u2=${newV}`,
       { replace: true }
     );
   };
-  const user1 = getUserById(data.teams[0].participants[u1].id);
-  const user2 = getUserById(data.teams[1].participants[u2].id);
 
+  const user1 = useGetUserLaserTagAverageData(participants[u1].id);
+  const user2 = useGetUserLaserTagAverageData(participants[u2].id);
+  const data = useMemo(() => {
+    return user1.data.map((x, i) => ({
+      name: x.name,
+      count: Number(x.value),
+      compared: Number(user2.data[i].value),
+    }));
+  }, [user1, user2]);
   if (!user2) return <></>;
   return (
     <Section>
@@ -83,7 +92,7 @@ export default function PlayerComparison({ data }) {
             </h1>
           </div>
         </div>
-        <PlayerTargets
+        <ChartComparison
           primary={user1.user.id}
           secondary={user2.user.id}
           data={data}

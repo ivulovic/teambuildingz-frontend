@@ -1,0 +1,75 @@
+.navigation {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 1;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid #eee;
+
+    .navigation-links {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: space-around;
+        padding: 5px 5px;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .navigation-link {
+        align-items: center;
+        justify-content: space-around;
+        color: #ddd;
+        text-decoration: none;
+        padding: 5px;
+        text-align: center;
+        padding: 5px 5px 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        font-size: 0.75rem;
+    }
+
+    .navigation-link:hover,
+    .navigation-link.active {
+        color: #000;
+        cursor: pointer;
+    }
+
+    .navigation-center {
+        position: relative;
+    }
+
+    .navigation-addMenu .navigation-link {
+        margin-top: 5px !important;
+    }
+
+    .navigation-icon {
+        font-size: 2em;
+        margin-bottom: 5px;
+    }
+
+    .navigation-addMenu {
+        margin-top: -1.6em;
+        position: relative;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        padding: 0;
+        z-index: 1;
+    }
+
+    .navigation-addMenu:before {
+        content: "\2B22";
+        font-size: 2.8em;
+        color: var(--accent);
+        z-index: -1;
+        position: absolute;
+    }
+}
