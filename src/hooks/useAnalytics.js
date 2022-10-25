@@ -7,7 +7,6 @@ export default function useAnalytics() {
   useEffect(() => {
     const s = search.toString();
     const searchString = s ? `?${s}` : '';
-    console.log('changed',window.origin + href.slice(1) + searchString)
     if (window.gtag) {
       window.gtag("event", "page_view", {
         send_to: "G-SFPKRJDVT3",
