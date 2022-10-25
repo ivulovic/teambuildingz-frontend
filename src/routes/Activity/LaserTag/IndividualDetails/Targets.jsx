@@ -35,17 +35,12 @@ export default function Targets({ id, data }) {
     return populatedData;
   };
   const hitsChartData = useMemo(() => getPopulatedData("hits"), [id]);
-  // const woundsChartData = useMemo(() => getPopulatedData("wounds"), [id]);
 
   return (
     <>
       <Section title="Hits" subtitle={"A hit you made to the opponent"}>
         <BarChart data={hitsChartData} />
       </Section>
-
-      {/* <Section title="Wounds" subtitle={"A hit opponent made to you"}>
-        <BarChart data={woundsChartData} />
-      </Section> */}
     </>
   );
 }

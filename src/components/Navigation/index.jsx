@@ -1,8 +1,5 @@
 import React from "react";
-import { BsBookmarkDash, BsPlusLg } from "react-icons/bs";
-import { HiHome, HiOutlineHome } from "react-icons/hi";
-import { AiOutlineMessage } from "react-icons/ai";
-import { TiUserOutline } from "react-icons/ti";
+import { HiOutlineHome } from "react-icons/hi";
 import { RiGamepadLine } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
 import "./style.scss";

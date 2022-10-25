@@ -3,7 +3,6 @@ import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import Avatar from "../../../../components/Avatar";
 import Section from "../../../../components/Section";
-import { Activities } from "../../../../db/data/activities";
 import PlayerTargets from "./PlayerTargets";
 
 export default function PlayerComparison({ data }) {
