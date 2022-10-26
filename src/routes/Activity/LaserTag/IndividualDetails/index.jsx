@@ -21,7 +21,10 @@ export default function Details() {
   return (
     <div className="page-layout">
       <Helmet>
-        <title>{defaultUser.name}'s Statistic | Teambuildingz </title>
+        <title>
+          {defaultUser.name}'s Statistic | {data.activity.name} #{data.id} |
+          Teambuildingz
+        </title>
       </Helmet>
       <IndividualStatistic id={defaultUser.id} data={data} />
       <Targets id={defaultUser.id} data={data} />

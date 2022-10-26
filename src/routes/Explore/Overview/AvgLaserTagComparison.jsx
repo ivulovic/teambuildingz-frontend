@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import Avatar from "../../../components/Avatar";
@@ -49,6 +50,7 @@ export default function AvgLaserTagComparison({ participants }) {
 
   const user1 = useGetUserLaserTagAverageData(participants[u1].id);
   const user2 = useGetUserLaserTagAverageData(participants[u2].id);
+
   const data = useMemo(() => {
     return user1.data.map((x, i) => ({
       name: x.name,
@@ -58,46 +60,48 @@ export default function AvgLaserTagComparison({ participants }) {
   }, [user1, user2]);
   if (!user2) return <></>;
   return (
-    <Section>
-      <div className="individual-statistic">
-        <div className="inline-list">
-          <div className="player-header">
-            <Avatar width={35} height={35} img={user1.user.image} />
-            <h1 className="text-character-1">
-              <button onClick={() => handleChangeU1(-1, u1, "u1")}>
-                <FiChevronLeft />
-              </button>
-              <span>{user1.user.name}</span>
-              <button onClick={() => handleChangeU1(+1, u1, "u1")}>
-                <FiChevronRight />
-              </button>
-            </h1>
+    <>
+      <Section>
+        <div className="individual-statistic">
+          <div className="inline-list">
+            <div className="player-header">
+              <Avatar width={35} height={35} img={user1.user.image} />
+              <h1 className="text-character-1">
+                <button onClick={() => handleChangeU1(-1, u1, "u1")}>
+                  <FiChevronLeft />
+                </button>
+                <span>{user1.user.name}</span>
+                <button onClick={() => handleChangeU1(+1, u1, "u1")}>
+                  <FiChevronRight />
+                </button>
+              </h1>
+            </div>
+            <div className="player-header">
+              <Avatar width={35} height={35} img={user2.user.image} />
+              <h1 className="text-character-2">
+                <button
+                  type="button"
+                  onClick={() => handleChangeU2(-1, u2, "u2")}
+                >
+                  <FiChevronLeft />
+                </button>
+                <span>{user2.user.name}</span>
+                <button
+                  type="button"
+                  onClick={() => handleChangeU2(+1, u2, "u2")}
+                >
+                  <FiChevronRight />
+                </button>
+              </h1>
+            </div>
           </div>
-          <div className="player-header">
-            <Avatar width={35} height={35} img={user2.user.image} />
-            <h1 className="text-character-2">
-              <button
-                type="button"
-                onClick={() => handleChangeU2(-1, u2, "u2")}
-              >
-                <FiChevronLeft />
-              </button>
-              <span>{user2.user.name}</span>
-              <button
-                type="button"
-                onClick={() => handleChangeU2(+1, u2, "u2")}
-              >
-                <FiChevronRight />
-              </button>
-            </h1>
-          </div>
+          <ChartComparison
+            primary={user1.user.id}
+            secondary={user2.user.id}
+            data={data}
+          />
         </div>
-        <ChartComparison
-          primary={user1.user.id}
-          secondary={user2.user.id}
-          data={data}
-        />
-      </div>
-    </Section>
+      </Section>
+    </>
   );
 }
