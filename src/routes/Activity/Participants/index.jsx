@@ -21,7 +21,7 @@ export default function Participants() {
       <div className="user">
         <Section
           title={"Participants"}
-          subtitle={`Participants who were part of this ${activity.name} activity`}
+          subtitle={`Participants who were part of this ${activity.activity.name} activity`}
         >
           {activity.participants.map((user) => (
             <UserCard
