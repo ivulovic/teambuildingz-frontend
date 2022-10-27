@@ -64,7 +64,7 @@ export default function Profile() {
                       label={{
                         fill: "gray",
                         position: "top",
-                        fontSize: 8,
+                        fontSize: 9,
                         textShadow: "10px 10px 10px black",
                       }}
                     />
@@ -74,7 +74,7 @@ export default function Profile() {
                       tickCount={0}
                       interval={0}
                       tick={{
-                        fontSize: "8px",
+                        fontSize: "9px",
                       }}
                     />
                   </BarChart>

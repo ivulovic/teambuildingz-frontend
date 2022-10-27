@@ -14,6 +14,7 @@ export default function Team({ members, name, description }) {
               height={100 - i * 10}
               image={x.user.image}
               title={x.user.name}
+              name={x.user.name}
             />
           </Link>
         ))}

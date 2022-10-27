@@ -19,10 +19,10 @@ export default function SingleBarChart({ data }) {
           dataKey="name"
           tickMargin={0}
           interval={0}
-          tick={{ fontSize: "8px", width: "50px", wordWrap: "break-word" }}
+          tick={{ fontSize: "9px", width: "50px", wordWrap: "break-word" }}
         />
         <Bar
-          label={{ fill: "gray", fontSize: 8, position: "top" }}
+          label={{ fill: "gray", fontSize: 9, position: "top" }}
           dataKey="value"
         />
       </BarChart>

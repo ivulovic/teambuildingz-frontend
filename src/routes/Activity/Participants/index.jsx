@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Navigate, useParams } from "react-router-dom";
 import Section from "../../../components/Section";
 import UserCard from "../../../components/UserCard";
@@ -9,21 +10,29 @@ export default function Participants() {
   if (!activity) {
     return <Navigate to="/" />;
   }
+  console.log(activity);
   return (
-    <div className="user">
-      <Section
-        title={"Participants"}
-        subtitle={`Participants who were part of this ${activity.name} activity`}
-      >
-        {activity.participants.map((user) => (
-          <UserCard
-            id={user.id}
-            username={user.username}
-            image={user.image}
-            bio={user.name}
-          />
-        ))}
-      </Section>
-    </div>
+    <>
+      <Helmet>
+        <title>
+          Participants | {activity.activity.name} #{activity.id} | Teambuildingz
+        </title>
+      </Helmet>
+      <div className="user">
+        <Section
+          title={"Participants"}
+          subtitle={`Participants who were part of this ${activity.name} activity`}
+        >
+          {activity.participants.map((user) => (
+            <UserCard
+              id={user.id}
+              username={user.username}
+              image={user.image}
+              bio={user.name}
+            />
+          ))}
+        </Section>
+      </div>
+    </>
   );
 }

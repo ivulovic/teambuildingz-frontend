@@ -25,7 +25,7 @@ export default function PlayerTargets({ data }) {
               label={{
                 fill: "gray",
                 position: "top",
-                fontSize: 8,
+                fontSize: 9,
                 textShadow: "10px 10px 10px black",
               }}
             />
@@ -34,7 +34,7 @@ export default function PlayerTargets({ data }) {
               stackId="b"
               fill="var(--character-2)"
               label={{
-                fontSize: 8,
+                fontSize: 9,
                 fill: "gray",
                 position: "top",
               }}
@@ -44,7 +44,7 @@ export default function PlayerTargets({ data }) {
               allowDataOverflow={true}
               tickCount={0}
               interval={0}
-              tick={{ fontSize: "8px", width: "10px", wordWrap: "break-word" }}
+              tick={{ fontSize: "9px", width: "10px", wordWrap: "break-word" }}
             />
           </BarChart>
         </ResponsiveContainer>
