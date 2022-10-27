@@ -26,6 +26,7 @@ export default function Participants() {
           {activity.participants.map((user) => (
             <UserCard
               id={user.id}
+              activityId={activity.id}
               username={user.username}
               image={user.image}
               bio={user.name}

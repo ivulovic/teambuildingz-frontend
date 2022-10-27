@@ -1,34 +1,39 @@
 import { Link } from "react-router-dom";
 import "./style.scss";
 
-const LIMIT = 4;
+const LIMIT = 6;
 
 export default function Activity({ id, path, title, date, members, location }) {
-  const membersToList = members.slice(0, LIMIT);
-
+  const list = members.slice(0, LIMIT);
   const membersLeft = members.length - LIMIT;
-
   return (
     <div className="activity">
       <Link className="title" to={`/activity/${path}/${id}`}>
         {title}
       </Link>
       <div className="footer">
-        <span className="location">
-          {location}, {date}
-        </span>
         <span className="members">
-          {membersToList.map((x, i) => (
-            <div key={x.id}>
-              <Link to={`/users/${x.id}`}>{x.name}</Link>
-              {i !== LIMIT - 1 ? <span>,&nbsp;</span> : <span>&nbsp;</span>}
+          {list.map((x, i) => (
+            <div key={x.id} className="user-image">
+              <Link
+                // to={`/users/${x.id}`}
+                to={`/activity/${path}/${id}/users/${x.id}`}
+                style={{
+                  backgroundImage: `url(${x.image})`,
+                }}
+              >
+                <span>{x.name}</span>
+              </Link>
             </div>
           ))}
-
-          <Link to={`/activity/${path}/${id}/participants`}>
-            and {membersLeft} others
+          <Link
+            className="more-members"
+            to={`/activity/${path}/${id}/participants`}
+          >
+            + {membersLeft} more
           </Link>
         </span>
+        <span className="location">{date}</span>
       </div>
     </div>
   );

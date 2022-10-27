@@ -2,6 +2,9 @@
     display: grid;
     gap: 1rem;
 }
+.user .user-card:not(:last-child){
+    margin-bottom: 0.5rem;
+}
 
 .inline-list{
     display: flex;
