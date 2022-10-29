@@ -1,0 +1,103 @@
+.main-search {
+    margin: 0.5rem 0 0 0;
+    $radius: 4px;
+    $padding: 12px;
+    .content-search {
+        position: relative;
+        z-index: 2;
+
+        &:focus-within {
+            cursor: pointer;
+        }
+        .search-input {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin: 0 auto;
+
+            input {
+                background-color: var(--background);
+                color: var(--text);
+                border: 1px solid var(--border-light);
+                outline-color: var(--border-light);
+                transition: color 0.3s ease;
+                outline: none;
+                padding: $padding;
+                font-size: 1rem;
+                border-radius: $radius;
+
+                &:focus {
+                    // box-shadow:-1px -3px 6px #f3f3f3;
+                    cursor: pointer;
+                }
+
+                &::-webkit-input-placeholder {
+                    /* Edge */
+                    color: var(--secondary);
+                    font-size: var(--font-size);
+                }
+
+                &:-ms-input-placeholder {
+                    /* Internet Explorer 10-11 */
+                    color: var(--secondary);
+                    font-size: var(--font-size);
+                }
+
+                &::placeholder {
+                    color: var(--secondary);
+                    font-size: var(--font-size);
+                }
+            }
+
+            &.has-results input {
+                border-radius: $radius $radius 0px 0px;
+                border-bottom: 0px;
+            }
+        }
+    }
+
+    .search-results-wrapper {
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .search-results {
+        max-width: 100%;
+        margin: 0 auto;
+        border-top: none;
+        position: absolute;
+        width: 100%;
+        background-color: var(--background);
+        max-height: 475px;
+        border: 1px solid var(--border-light);
+        // border-top-color: var(--border);
+        // border-top-width: 1px;
+        
+        overflow: auto;
+
+        padding: 0 0px $padding 0px;
+        // top: -($padding*3);
+        border-radius: $radius;
+        z-index: 1;
+
+        .search-result {
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--text);
+            display: block;
+            background: transparent;
+            border: none;
+            width: 100%;
+            text-align: left;
+            outline: none;
+
+            .user-card{
+                background-color: unset;
+            }
+            &:hover {
+                color: var(--text);
+                cursor: pointer;
+            }
+        }
+    }
+}

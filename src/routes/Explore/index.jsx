@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Outlet } from "react-router-dom";
+import Search from "../../components/Search";
 
 export default function Explore() {
   return (
@@ -7,6 +8,7 @@ export default function Explore() {
       <Helmet>
         <title>Explore | Teambuildingz </title>
       </Helmet>
+      <Search />
       <Outlet />
     </div>
   );

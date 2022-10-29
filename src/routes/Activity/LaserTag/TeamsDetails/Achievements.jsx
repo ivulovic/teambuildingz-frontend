@@ -44,33 +44,33 @@ export default function Achievements({ data }) {
           title={destroyer.user.name}
           image={destroyer.user.image}
           points={destroyer.damageDone}
-          descriptionLong="Made the most damage to opponents"
+          descriptionLong="Most damage done"
         />
         <Achievement
           description="Sniper"
           title={sniper.user.name}
           image={sniper.user.image}
           points={sniper.accuracy.toFixed(2) + "%"}
-          descriptionLong="Player with best accuracy"
+          descriptionLong="Best accuracy"
         />
         <Achievement
           description="Kamikaze"
           points={kamikaze.gameOver}
           title={kamikaze.user.name}
           image={kamikaze.user.image}
-          descriptionLong="Player with most deaths"
+          descriptionLong="Most deaths"
         />
         <Achievement
           description="Rambo"
           title={rambo.user.name}
           image={rambo.user.image}
           points={rambo.shotFired}
-          descriptionLong="Player with most shots fired"
+          descriptionLong="Most shots fired"
         />
 
         <Achievement
           description="Invulnerable"
-          descriptionLong="Player who was wounded the least"
+          descriptionLong="Least wounded"
           title={invulnerable.user.name}
           image={invulnerable.user.image}
           points={invulnerable.wounds.total}
@@ -80,7 +80,7 @@ export default function Achievements({ data }) {
           description="Warrior"
           title={warrior.user.name}
           image={warrior.user.image}
-          descriptionLong="Player with the best rating"
+          descriptionLong="Best rating"
           points={warrior.rating.toFixed(2)}
         />
       </div>
