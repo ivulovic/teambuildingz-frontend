@@ -4,16 +4,20 @@ import Header from "../Header";
 import Navigation from "../Navigation";
 import "./style.scss";
 
-const MobileLayout = ({ children }) => {
+const MobileLayout = ({
+  children,
+  showHeader = true,
+  showNavigation = true,
+}) => {
   useAnalytics();
 
   return (
     <>
-      <Header />
+      {showHeader ? <Header /> : <></>}
       <div className="mobile-layout">
         <div className="mobile-body">{children}</div>
       </div>
-      <Navigation />
+      {showNavigation ? <Navigation /> : <></>}
     </>
   );
 };

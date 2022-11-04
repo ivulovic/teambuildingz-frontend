@@ -12,6 +12,8 @@ import Participants from "./routes/Activity/Participants";
 import Explore from "./routes/Explore";
 import ExploreOverview from "./routes/Explore/Overview";
 import ExploreDetails from "./routes/Explore/Details";
+import SignIn from "./routes/SignIn";
+import SignUp from "./routes/SignUp";
 
 function App() {
   return (
@@ -24,6 +26,22 @@ function App() {
             </MobileLayout>
           }
           path="/"
+        />
+        <Route
+          element={
+            <MobileLayout showHeader={false} showNavigation={false}>
+              <SignIn />
+            </MobileLayout>
+          }
+          path="/sign-in"
+        />
+        <Route
+          element={
+            <MobileLayout showHeader={false} showNavigation={false}>
+              <SignUp />
+            </MobileLayout>
+          }
+          path="/sign-up"
         />
         <Route
           element={
